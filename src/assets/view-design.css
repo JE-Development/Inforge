@@ -12,6 +12,22 @@
     font-size: 25px;
 }
 
+.nav-button{
+    display: flex;
+    width: 150px;
+    height: 40px;
+    margin: 2px;
+
+    border: 0px solid transparent;
+
+    background: linear-gradient(to bottom, #FE4F06, #F37601);
+
+    cursor: pointer;
+    border-radius: 100px;
+
+    font-size: 25px;
+}
+
 .game-button-default{
     display: flex;
     width: 140px;
@@ -27,22 +43,6 @@
     font-size: 25px;
 }
 
-.game-button-drop{
-    background: #b4c9ff;
-}
-
-.game-button-move{
-    background: #b4eeff;
-}
-
-.game-button-view{
-    background: #e9ffc1;
-}
-
-.game-button-reveal{
-    background: #ffadbc;
-}
-
 .register-input{
     width: 300px;
     height: 30px;
@@ -51,75 +51,6 @@
     border-radius: 10px;
     border-color: transparent;
     padding-left: 10px;
-}
-
-.profile-picture{
-    width: 50px;
-}
-
-.player-card{
-    margin: 10px;
-
-    background: #00000022;
-    width: 180px;
-    height: 160px;
-    border-radius: 20px;
-}
-
-.dice-border{
-    padding: 7px;
-    font-weight: bold;
-    border-radius: 8px;
-
-    margin: 2px;
-
-    display: flex;
-
-
-    border: 3px solid transparent;
-
-    cursor: pointer;
-
-    font-size: 15px;
-}
-
-.dice-border-m{
-    width: 100px;
-
-    margin: 2px;
-
-    padding: 7px;
-    font-weight: bold;
-    border-radius: 8px;
-
-    display: flex;
-
-    justify-content: center;
-
-    border: 3px solid transparent;
-
-    cursor: pointer;
-
-    font-size: 15px;
-}
-
-.line1{
-    background: #c9ff8a;
-}
-.line2{
-    background: #83ffa6;
-}
-.line3{
-    background: #5cf0ff;
-}
-.line4{
-    background: #8999ff;
-}
-.line5{
-    background: #ff88d9;
-}
-.line6{
-    background: #ffa600;
 }
 
 .prim-color{
@@ -131,47 +62,13 @@
 
 }
 
-.sec-color{
-    background: #5cf0ff;
-}
-
-.third-color-background{
-    background: #c9ff8a;
-}
-
-.fourth-color-background{
-    background: #bfc7ff;
-}
-
-.fifth-color-background{
-    background: #ff88d9;;
-}
-
-.texture{
-    background-image: url("./texture1.png");
-}
-
 .shadow{
     box-shadow: 0px 0px 20px #000000;
 }
 
-.sec-color-text{
-    color: #5cf0ff
-}
 
 .white-background{
-    background: #b7b7b7;
-}
-
-.dice-image{
-    margin-top: 295px;
-    width: 50px;
-}
-
-.crown{
-    width: 45px;
-    height: 20px;
-    transform: translateY(13px);
+    background: #ffffff;
 }
 
 .check-box{
@@ -182,10 +79,6 @@
 .check-box-label{
     margin-left: 10px;
     font-size: 20px;
-}
-
-.check-box-text{
-    color: #76ffba;
 }
 
 .check-view{
@@ -204,14 +97,6 @@
     border-color: #5cf0ff;
 }
 
-.public-room{
-    width: 300px;
-    height: 50px;
-    margin: 15px;
-}
-
-.dashboard-room{
-    width: 500px;
-    height: 50px;
-    margin: 15px
+.inforge-icon{
+    width: 400px;
 }

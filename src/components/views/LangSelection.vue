@@ -41,9 +41,11 @@ export default {
         getCookies(key){
             return this.$cookies.get(key);
         },
-        setCookies(key, value){
-            return this.$cookies.set(key, value, 2147483647);
-        },
+      setCookies(key, value){
+        if(this.getCookies("allowedCookies") === "true"){
+          this.$cookies.set(key, value, 2147483647);
+        }
+      },
     }
 }
 </script>
