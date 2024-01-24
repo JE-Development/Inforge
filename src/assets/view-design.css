@@ -12,15 +12,36 @@
     font-size: 25px;
 }
 
+
+
+.main-field{
+    width: 95vw;
+    height: 80vh;
+    background: #000000;
+    overflow: hidden;
+    position: relative;
+}
+
+.main-field-text{
+    width: 80%;
+    height: 80%;
+}
+
+.main-field-image{
+    height: 140vh;
+    transform: translateY(-30vh);
+}
+
+
 .nav-button{
     display: flex;
-    width: 150px;
+    width: 170px;
     height: 40px;
     margin: 2px;
 
     border: 0px solid transparent;
 
-    background: linear-gradient(to bottom, #FE4F06, #F37601);
+    background: linear-gradient(to bottom, #dc4201, #fd922d);
 
     cursor: pointer;
     border-radius: 100px;
@@ -97,6 +118,24 @@
     border-color: #5cf0ff;
 }
 
+.white{
+    color: #ffffff;
+}
+
+.black{
+    color: #000000;
+}
+
 .inforge-icon{
-    width: 400px;
+    width: 300px;
+}
+
+.inforge-text{
+    width: 250px;
+    object-fit: contain;
+}
+
+.raute{
+    width: 100px;
+    object-fit: contain;
 }

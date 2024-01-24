@@ -4,12 +4,16 @@ body{
     font-family: "Arial";
 }
 
+h1, h2, h3, h4, h5, h6, p{
+    color: #ffffff;
+}
+
 .on-bottom{
     z-index: -9999;
 }
 
 .round-corner{
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 .absolute{
@@ -27,6 +31,10 @@ body{
 
 .max-width{
     width: 100%;
+}
+
+.max-height{
+    height: 100%;
 }
 
 .center-horizontal{
@@ -68,6 +76,10 @@ body{
     padding-bottom: 10px;
 }
 
+.overflow-hidden{
+    overflow: hidden;
+}
+
 
 .grid {
     display: grid;
@@ -86,7 +98,7 @@ body{
 }
 
 .header-size{
-    width: 99vw;
+    width: 95vw;
     height: 80px;
 }
 

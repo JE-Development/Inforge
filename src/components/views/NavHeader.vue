@@ -2,7 +2,19 @@
 
     <div class="center-horizontal">
       <button class="nav-button center-horizontal">
-        <p style="margin-top: 5px">{{title}}</p>
+        <p style="margin-top: 3px" class="black">Spiele</p>
+      </button>
+      <div style="width: 20px"></div>
+      <button class="nav-button center-horizontal">
+        <p style="margin-top: 3px" class="black">Projekte</p>
+      </button>
+      <div style="width: 20px"></div>
+      <button class="nav-button center-horizontal">
+        <p style="margin-top: 3px" class="black">Vorschläge</p>
+      </button>
+      <div style="width: 20px"></div>
+      <button class="nav-button center-horizontal">
+        <p style="margin-top: 3px" class="black">Über Inforge</p>
       </button>
     </div>
 
