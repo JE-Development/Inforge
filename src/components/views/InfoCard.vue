@@ -1,16 +1,17 @@
 <template>
 
     <div class="gradient-box round-corner center">
-      <div style="width: 95%; height: 95%;">
-        <div class="center-horizontal">
-          <h1>{{title}}</h1>
+      <div>
+        <div style="width: 95%; height: 280px;">
+          <div class="center-horizontal">
+            <h1>{{title}}</h1>
+          </div>
+          <p class="center-text">{{teaser}}</p>
         </div>
-        <p class="center-text">InfoCard ist eine selbstprogrammiertes HTML Element. Es dient dazu schön auszusehen und so.</p>
-        <p class="center-text">InfoCard ist eine selbstprogrammiertes HTML Element. Es dient dazu schön auszusehen und so.</p>
-        <p class="center-text">InfoCard ist eine selbstprogrammiertes HTML Element. Es dient dazu schön auszusehen und so.</p>
-        <p class="center-text">InfoCard ist eine selbstprogrammiertes HTML Element. Es dient dazu schön auszusehen und so.</p>
-        <p class="center-text">InfoCard ist eine selbstprogrammiertes HTML Element. Es dient dazu schön auszusehen und so.</p>
-        <p class="center-text">InfoCard ist eine selbstprogrammiertes HTML Element. Es dient dazu schön auszusehen und so.</p>
+        <div class="center-horizontal">
+          <UIButton :title="button" @click="click"/>
+        </div>
+        <div style="height: 10px"></div>
       </div>
     </div>
 
@@ -19,8 +20,11 @@
 
 <script>
 
+import UIButton from "@/components/views/UIButton.vue";
+
 export default {
     name: "InfoCard",
+  components: {UIButton},
     data() {
         return {
         };
