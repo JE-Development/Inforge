@@ -53,6 +53,10 @@ h1, h2, h3, h4, h5, h6, p{
     justify-content: center;
 }
 
+.center-text{
+    text-align: center;
+}
+
 .left{
     display: flex;
     justify-content: start;
@@ -83,10 +87,8 @@ h1, h2, h3, h4, h5, h6, p{
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 20px;
-    align-items: center;
-    justify-items: center;
 }
 
 .flex{
@@ -102,27 +104,8 @@ h1, h2, h3, h4, h5, h6, p{
     height: 80px;
 }
 
-.main-grid {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(5, 0fr);
-    gap: 10px;
-}
-
 @media (max-width: 570px) {
-    .main-grid {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(4, 0fr);
-        gap: 10px;
-    }
-}
+    .grid {
 
-@media (max-width: 450px) {
-    .main-grid {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(3, 0fr);
-        gap: 10px;
     }
 }

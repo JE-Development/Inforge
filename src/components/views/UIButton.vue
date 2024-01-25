@@ -1,9 +1,9 @@
 <template>
 
-  <button class="register-button center-horizontal texture" :class="color" @click="click">
-    <p style="margin-top: 5px">{{title}}</p>
+  <button class="ui-button center-horizontal" @click="click">
+    <p style="margin-top: 3px" class="black">{{title}}</p>
   </button>
-  <button class="register-button center-horizontal shadow absolute on-bottom" @click="click">
+  <button class="ui-button center-horizontal shadow absolute on-bottom" @click="click">
 
   </button>
 

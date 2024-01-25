@@ -49,6 +49,22 @@
     font-size: 25px;
 }
 
+.ui-button{
+    display: flex;
+    width: 200px;
+    height: 40px;
+    margin: 2px;
+
+    border: 0px solid transparent;
+
+    background: linear-gradient(to bottom, #dc4201, #fd922d);
+
+    cursor: pointer;
+    border-radius: 100px;
+
+    font-size: 25px;
+}
+
 .game-button-default{
     display: flex;
     width: 140px;
@@ -84,7 +100,7 @@
 }
 
 .shadow{
-    box-shadow: 0px 0px 20px #000000;
+    box-shadow: 0px 0px 10px #ff8500;
 }
 
 
@@ -138,4 +154,15 @@
 .raute{
     width: 100px;
     object-fit: contain;
+}
+
+.main-card{
+    padding: 15px;
+    background: #000000;
+}
+
+.gradient-box {
+    border-image: linear-gradient(#DC4201, #FD922D) 30;
+    border-width: 4px;
+    border-style: solid;
 }

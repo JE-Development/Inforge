@@ -41,38 +41,54 @@
     <div class="center-horizontal max-width">
       <div class="max-width">
         <div class="center-horizontal max-width">
-          <div style="width: 50%" class="center-horizontal">
+          <div style="width: 5%"></div>
+          <div style="width: 40%" class="center-horizontal main-card round-corner">
             <div>
               <div class="center-horizontal">
                 <img src="../assets/raute-dice.png" class="raute">
               </div>
-              <p>Dies ist ein Paragraph mit viel text</p>
-              <p>Dies ist ein Paragraph mit viel text</p>
-              <p>Dies ist ein Paragraph mit viel text</p>
-              <p>Dies ist ein Paragraph mit viel text</p>
-              <p>Dies ist ein Paragraph mit viel text</p>
-              <p>Dies ist ein Paragraph mit viel text</p>
-              <p>Dies ist ein Paragraph mit viel text</p>
-              <p>Dies ist ein Paragraph mit viel text</p>
-              <p>Dies ist ein Paragraph mit viel text</p>
-              <p>Dies ist ein Paragraph mit viel text</p>
-              <p>Dies ist ein Paragraph mit viel text</p>
+              <div class="center-horizontal">
+                <h3>DiceBluff</h3>
+              </div>
+              <p class="center-text">DiceBluff ist eine Browser Game Adaption von dem Würfelspiel namens "Mäxchen" oder "Mia".</p>
+              <p class="center-text">DiceBluff ist ein geselliges Würfelspiel, bei dem Spieler abwechselnd würfeln und versuchen,
+                beim Lügen nicht erwischt zu werden. Spieler geben ihre Würfelergebnisse an und der nächste Spieler muss entscheiden,
+                ob er ihnen glaubt oder nicht. Ziel ist es, als Letzter übrig zu bleiben. Es ist ein einfaches, aber unterhaltsames
+                Spiel, das für jede Art von Zusammenkunft geeignet ist und für viel Spaß und Lachen sorgt.</p>
+              <div class="center-horizontal">
+                <UIButton :title="'Zu DiceBluff'" @click="onClickDiceBluff"/>
+              </div>
             </div>
           </div>
-          <div style="width: 50%" class="center-horizontal">
+          <div style="width: 10%"></div>
+          <div style="width: 40%" class="center-horizontal main-card round-corner">
             <div>
               <div class="center-horizontal">
                 <img src="../assets/raute-frame.png" class="raute">
               </div>
-              <p>Dies ist ein Paragraph mit viel text</p>
-              <p>Dies ist ein Paragraph mit viel text</p>
-              <p>Dies ist ein Paragraph mit viel text</p>
-              <p>Dies ist ein Paragraph mit viel text</p>
-              <p>Dies ist ein Paragraph mit viel text</p>
-              <p>Dies ist ein Paragraph mit viel text</p>
+              <div class="center-horizontal">
+                <h3>FrameGame</h3>
+              </div>
+              <p class="center-text">FrameGame ist eine modifizierte Variante von "Gartic Phone". Anstatt Dinge zu zeichnen
+                oder malen, kann man bei FrameGame sein Bild mit vielen verschiedenen Bilddateien zusammenstellen. Dabei stehen einem eine große Bibliothek an Bilder zur verfügung.</p>
+              <div class="center-horizontal">
+                <UIButton :title="'Zu FrameGame'" @click="onClickFrameGame"/>
+              </div>
             </div>
           </div>
+          <div style="width: 5%"></div>
         </div>
+      </div>
+    </div>
+
+    <div style="height: 20px"></div>
+
+    <div>
+      <div class="grid">
+        <InfoCard :title="'Info Card'" :button="'button'"/>
+        <InfoCard :title="'Info Card'" :button="'button'"/>
+        <InfoCard :title="'Info Card'" :button="'button'"/>
+        <InfoCard :title="'Info Card'" :button="'button'"/>
       </div>
     </div>
 
@@ -86,10 +102,12 @@
 import langDE from "../assets/langDE.json"
 import langEN from "../assets/langEN.json"
 import NavHeader from "@/components/views/NavHeader.vue";
+import UIButton from "@/components/views/UIButton.vue";
+import InfoCard from "@/components/views/InfoCard.vue";
 
 export default {
     name: "MainPage",
-  components: {NavHeader},
+  components: {InfoCard, UIButton, NavHeader},
     data() {
         return {
         };
@@ -103,6 +121,14 @@ export default {
     },
 
     methods: {
+
+      onClickFrameGame(){
+        window.open('https://framegame.inforge.de', '_self');
+      },
+
+      onClickDiceBluff(){
+        window.open('https://dicebluff.inforge.de', '_self');
+      },
 
         getCookies(key){
             return this.$cookies.get(key);
