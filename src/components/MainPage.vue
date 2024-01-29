@@ -9,16 +9,19 @@
 
 
         <div class="project-box center-horizontal">
-          <div class="project-box-left overflow-hidden">
+          <div class="project-box-left relative">
+            <div class="absolute overflow-hidden max-width">
+              <img src="../assets/content-background.jpeg" style="opacity: 0.3; width: 50vw">
+            </div>
             <div class="absolute center" style="width: 35vw; height: 700px">
               <div style="width: 30vw">
                 <h1 class="center-text">Weitere Projekte</h1>
                 <p class="center-text">Hier sind weitere Projekte die in Arbeit sind. Die meisten sind erst am Anfang in der Entwicklung und noch sehr unausgereift.</p>
               </div>
             </div>
-            <img src="../assets/content-background.jpeg" style="opacity: 0.3; width: 50vw">
           </div>
           <div class="project-box-right">
+            <img src="../assets/content-background-2.jpeg" style="opacity: 0.1; width: 50vw" class="absolute">
             <div class="absolute">
               <div class="project-grid max-height">
                 <div class="max-width max-height center" style="transform: translate(100px, -100px)">
@@ -35,7 +38,7 @@
                 </div>
               </div>
             </div>
-            <img src="../assets/content-background-2.jpeg" style="opacity: 0.1; width: 50vw">
+
           </div>
         </div>
 

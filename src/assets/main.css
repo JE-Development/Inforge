@@ -111,6 +111,22 @@ h1, h2, h3, h4, h5, h6, p{
     opacity: 0.4;
 }
 
+.prim-color{
+    color: #DC4201;
+}
+
+.prim-color-background{
+    background: #DC4201;
+}
+
+.sec-color{
+    color: #FD922D;
+}
+
+.sec-color-background{
+    background: #FD922D;
+}
+
 .pointer{
     cursor: pointer;
 }

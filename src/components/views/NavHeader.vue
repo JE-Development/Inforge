@@ -1,21 +1,13 @@
 <template>
 
     <div class="center-horizontal">
-      <button class="nav-button center-horizontal pointer on-top" @click="onGames">
-        <p class="white nav-text">Spiele</p>
-      </button>
-      <div style="width: 20px"></div>
-      <button class="nav-button center-horizontal pointer on-top" @click="onProjects">
-        <p class="white nav-text">Projekte</p>
-      </button>
-      <div style="width: 20px"></div>
-      <button class="nav-button center-horizontal pointer on-top" @click="onSuggestion">
-        <p class="white nav-text">Vorschläge</p>
-      </button>
-      <div style="width: 20px"></div>
-      <button class="nav-button center-horizontal pointer on-top" @click="onAbout">
-        <p class="white nav-text">Über Inforge</p>
-      </button>
+      <h2 class="prim-color nav-text">Spiele</h2>
+      <div style="width: 30px"></div>
+      <h2 class="prim-color nav-text">Projekte</h2>
+      <div style="width: 30px"></div>
+      <h2 class="prim-color nav-text">Vorschläge</h2>
+      <div style="width: 30px"></div>
+      <h2 class="prim-color nav-text">Über Inforge</h2>
     </div>
 
 </template>

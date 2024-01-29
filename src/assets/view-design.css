@@ -219,12 +219,28 @@
     font-size: 1.5em;
 }
 
+.infocard-button{
+    display: flex;
+    width: 200px;
+    height: 40px;
+    margin: 2px;
+
+    border: 3px solid transparent;
+
+    background: rgba(41, 57, 96, 0.5);
+
+    cursor: pointer;
+    border-radius: 100px;
+
+    font-size: 25px;
+}
+
 .infocard-text{
     font-size: 0.9em;
 }
 
 .infocard{
-    background: #1d2128;
+    background: rgba(29, 33, 40, 0.5);
     border-radius: 20px;
     width: 250px;
     height: 360px;

@@ -9,7 +9,9 @@
           <p class="center-text infocard-text">{{teaser}}</p>
         </div>
         <div class="center-horizontal">
-          <UIButton :title="button" @click="click"/>
+          <button class="infocard-button center-horizontal" @click="click">
+            <p class="nav-text">{{title}}</p>
+          </button>
         </div>
         <div style="height: 10px"></div>
       </div>
