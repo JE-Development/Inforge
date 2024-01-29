@@ -1,7 +1,7 @@
 <template>
 
   <button class="ui-button center-horizontal" @click="click">
-    <p style="margin-top: 3px" class="black">{{title}}</p>
+    <p class="nav-text">{{title}}</p>
   </button>
   <button class="ui-button center-horizontal shadow absolute on-bottom" @click="click">
 

@@ -18,7 +18,7 @@
     width: 95vw;
     height: 80vh;
     min-height: 400px;
-    background: #000000;
+    background: rgba(0, 0, 0, 0);
     overflow: hidden;
     position: relative;
 }
@@ -41,14 +41,33 @@
     height: 40px;
     margin: 2px;
 
-    border: 0px solid transparent;
+    border: 3px solid transparent;
 
-    background: linear-gradient(to bottom, #dc4201, #fd922d);
+    background: linear-gradient(to bottom, #dc4201, #fd922d), linear-gradient(to bottom, #c5937e, #1f5043);
 
     cursor: pointer;
     border-radius: 100px;
 
     font-size: 25px;
+}
+
+.nav-text{
+    margin-top: -0px;
+}
+
+.nav-button{
+    display: flex;
+    width: 170px;
+    height: 40px;
+
+    background: linear-gradient(#000000, #000000) padding-box,
+    linear-gradient(to right, #dc4201 50%, #fd922d) border-box;
+
+    border-radius: 50px;
+    border: 3px solid transparent;
+
+    cursor: pointer;
+    border-radius: 50px;
 }
 
 .ui-button{
@@ -57,9 +76,10 @@
     height: 40px;
     margin: 2px;
 
-    border: 0px solid transparent;
+    border: 3px solid transparent;
 
-    background: linear-gradient(to bottom, #dc4201, #fd922d);
+    background: linear-gradient(#000000, #000000) padding-box,
+    linear-gradient(to right, #dc4201 50%, #fd922d) border-box;
 
     cursor: pointer;
     border-radius: 100px;
@@ -146,7 +166,6 @@
 
 .inforge-icon{
     height: 60px;
-    visibility: collapse;
 }
 
 .inforge-text-icon{
@@ -155,7 +174,7 @@
 }
 
 .inforge-text{
-    height: 50px;
+    height: 80px;
     object-fit: contain;
 }
 
@@ -167,7 +186,48 @@
 .main-card{
     width: 40%;
     padding: 15px;
-    background: #000000;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.project-box{
+
+}
+
+.project-box-left{
+    width: 35vw;
+    height: 700px;
+    border-image: linear-gradient(#DC4201, #FD922D) 30;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.project-box-right{
+    width: 55vw;
+    height: 700px;
+    border-image: linear-gradient(#DC4201, #FD922D) 30;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.project-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.infocard-headline{
+    font-size: 1.5em;
+}
+
+.infocard-text{
+    font-size: 0.9em;
+}
+
+.infocard{
+    background: #1d2128;
+    border-radius: 20px;
+    width: 250px;
+    height: 360px;
 }
 
 .main-field-text-block{
@@ -175,7 +235,7 @@
 }
 
 .main-field-content{
-    text-align: start;
+
 }
 
 .main-field-logo{
@@ -264,10 +324,6 @@
 
     .inforge-text-icon{
         visibility: collapse;
-    }
-
-    .inforge-icon{
-        visibility: visible;
     }
 }
 

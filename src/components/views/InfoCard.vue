@@ -1,12 +1,12 @@
 <template>
 
-    <div class="gradient-box round-corner center">
+    <div class="round-corner center infocard">
       <div>
         <div style="width: 95%; height: 280px;">
           <div class="center-horizontal">
-            <h1>{{title}}</h1>
+            <h1 class="infocard-headline">{{title}}</h1>
           </div>
-          <p class="center-text">{{teaser}}</p>
+          <p class="center-text infocard-text">{{teaser}}</p>
         </div>
         <div class="center-horizontal">
           <UIButton :title="button" @click="click"/>

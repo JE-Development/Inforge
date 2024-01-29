@@ -2,19 +2,19 @@
 
     <div class="center-horizontal">
       <button class="nav-button center-horizontal pointer on-top" @click="onGames">
-        <p style="margin-top: 3px" class="black">Spiele</p>
+        <p class="white nav-text">Spiele</p>
       </button>
       <div style="width: 20px"></div>
       <button class="nav-button center-horizontal pointer on-top" @click="onProjects">
-        <p style="margin-top: 3px" class="black">Projekte</p>
+        <p class="white nav-text">Projekte</p>
       </button>
       <div style="width: 20px"></div>
       <button class="nav-button center-horizontal pointer on-top" @click="onSuggestion">
-        <p style="margin-top: 3px" class="black">Vorschläge</p>
+        <p class="white nav-text">Vorschläge</p>
       </button>
       <div style="width: 20px"></div>
       <button class="nav-button center-horizontal pointer on-top" @click="onAbout">
-        <p style="margin-top: 3px" class="black">Über Inforge</p>
+        <p class="white nav-text">Über Inforge</p>
       </button>
     </div>
 
