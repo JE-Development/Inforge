@@ -230,14 +230,37 @@
     border-style: solid;
 }
 
+.project-box-half-mobile{
+    width: 95vw;
+    border-image: linear-gradient(#29414d, #072670) 30;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.project-space{
+    height: 26vw;
+}
+
+.project-space-under{
+    height: 2vw;
+}
+
 .project-grid{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
 
+.suggest{
+    display: flex;
+}
+
+.suggest-mobile{
+    display: none;
+}
+
 .stats-space{
-    height: 100px;
+    height: 800px;
 }
 
 .stats-grid-dicebluff{
@@ -399,12 +422,26 @@
 }
 
 @media (max-width: 750px) {
+    .suggest{
+        display: none;
+    }
+
+    .suggest-mobile{
+        display: flex;
+    }
+}
+
+@media (max-width: 750px) {
     .main-card{
         width: 90vw;
         margin-bottom: 20px;
     }
     .card-align{
         display: block;
+    }
+
+    .stats-space{
+        height: 50px;
     }
 }
 
@@ -452,8 +489,8 @@
         height: 1700px;
     }
 
-    .stats-space{
-        height: 800px;
+    .project-space-under{
+        height: 1000px;
     }
 
     .stats-raute{

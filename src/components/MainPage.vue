@@ -5,20 +5,6 @@
     <div class="absolute overflow-hidden max-width">
       <img src="../assets/background.jpeg" class="background-image">
 
-      <div style="transform: translateY(-180px); height: 2300px">
-
-
-        <!--
-        <div>
-          <div class="grid">
-            <InfoCard title="AmongUsLive" :button="'Weitere Infos'" teaser="AmongUsLive ist eine AmongUs Version die man im echten Leben spielen kann. Dieses Browsergame versucht das Spielerlebnis und die Spannung um echten Leben zu simulieren. Dabei ist dein Smartphone dein Wegbegleiter. Dieses Projekt liegt vorerst auf Eis, weil es in der Entwicklung zu komplikationen kam und andere Projekte vorrang hatten."/>
-            <InfoCard title="DiceBluffAndroid" :button="'Weitere Infos'" teaser="DiceBluffAndroid ist die Android Version von DiceBluff. Dieses Projekt ist jetzt erst enstatnden und steht noch in den Startlöchern."/>
-            <InfoCard title="RaspiWindow" :button="'Weitere Infos'" teaser="RaspiWindow ist ein Smart Window. Es zeigt dir verschidene Informationen zu verschiedene Dinge an. Das Projekt ist eine Weseite, die damals von meinem Raspberry Pi 3b+ angezeigt wurde. Das Projekt ist bis jetzt nur für meine private Anwendung konzipiert. Es folgt noch eine communitytaugliche Version."/>
-            <InfoCard title="MinecraftPlugin" :button="'Weitere Infos'" teaser="Ich habe auch ein Minecraft Plugin für allgemeine Serverzwecke entwickelt. Das Plugin beinhaltet ein Chunkloadersystem, Titelsystem und eine creative Bauwelt. Dieses Projekt wurde nur für private zwecke entwickelt. Eine communitytaugliche Version wird noch folgen."/>
-          </div>
-        </div>
-        /!-->
-      </div>
 
     </div>
 
@@ -92,12 +78,12 @@
         </div>
       </div>
 
-      <div style="height: 200px"></div>
+      <div class="project-space"></div>
 
       <div class="center-horizontal">
         <div class="project-box center-horizontal absolute">
           <div class="project-box-left relative">
-            <div class="absolute overflow-hidden max-width">
+            <div class="absolute overflow-hidden max-width max-height">
               <img src="../assets/content-background.jpeg" style="opacity: 0.3; width: 50vw">
             </div>
             <div class="absolute center" style="width: 35vw; height: 700px">
@@ -107,8 +93,10 @@
               </div>
             </div>
           </div>
-          <div class="project-box-right">
-            <img src="../assets/content-background-2.jpeg" style="opacity: 0.1; width: 50vw" class="absolute">
+          <div class="project-box-right relative">
+            <div class="absolute overflow-hidden max-height" style="width: 55vw">
+              <img src="../assets/content-background-2.jpeg" style="opacity: 0.1; object-fit: contain" class="max-width max-height">
+            </div>
             <div class="absolute">
               <div class="project-grid max-height">
                 <div class="max-width max-height center" style="transform: translate(100px, -100px)">
@@ -152,30 +140,57 @@
         </div>
       </div>
 
-      <div style="height: 300px"></div>
+      <div class="project-space-under"></div>
 
-      <div class="project-box center-horizontal">
-        <div class="project-box-half relative">
-          <div class="absolute overflow-hidden max-width max-height">
-            <img src="../assets/content-background-3.jpeg" style="opacity: 0.3; object-fit: contain" class="max-height">
+      <div>
+        <div class="center-horizontal suggest absolute max-width">
+          <div class="project-box-half relative">
+            <div class="absolute overflow-hidden max-width max-height">
+              <img src="../assets/content-background-3.jpeg" style="opacity: 0.3; object-fit: contain" class="max-height">
+            </div>
+            <div class="absolute center" style="width: 45vw; height: 700px">
+              <div class="max-width">
+                <h1 class="center-text">Das Vorschlägesystem von Inforge</h1>
+                <p class="center-text">Hier findest du eine kurze Einführung zum Vorschlägesystem</p>
+              </div>
+            </div>
           </div>
-          <div class="absolute center" style="width: 45vw; height: 700px">
-            <div style="width: 30vw">
-              <h1 class="center-text">Das Vorschlägesystem von Inforge</h1>
-              <p class="center-text">Hier findest du eine kurze Einführung zum Vorschlägesystem</p>
+          <div class="project-box-half center">
+            <div style="width: 80%; height: 95%" class="center">
+              <div>
+                <p class="center-text">Inforge bietet ein Vorschlägesystem, welches ermöglicht, Projekte mit Communitywünschen zu entwickeln oder zu verbessern.</p>
+                <p class="center-text">Du kannst ganz einfach ein Vorschlag schreiben bei dem jeweiligen Projekt, bei welchem
+                  du deine Ideen einbringen möchtest. Dabei kann man auch die Vorschläge der anderen sehen. Man kann auch die
+                  Vorschläge der anderen upvoten oder downvoten. Man sollte verhindern Vorschläge doppelt aufzuschreiben.
+                  Wenn du ein Vorschlag hast, welches bereits von jemand anderem vorgeschlagen worden ist, gebe ein upvote,
+                  damit wir sehen, dass dieser Vprschlag beliebt ist</p>
+                <p class="center-text">Deine Vorschläge werden in einer Google Cloud Datenbank gelagert und mit deinem Google Konto verknüpft.</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="project-box-half center">
-          <div style="width: 80%; height: 95%" class="center">
-            <div>
-              <p class="center-text">Inforge bietet ein Vorschlägesystem, welches ermöglicht, Projekte mit Communitywünschen zu entwickeln oder zu verbessern.</p>
-              <p class="center-text">Du kannst ganz einfach ein Vorschlag schreiben bei dem jeweiligen Projekt, bei welchem
-                du deine Ideen einbringen möchtest. Dabei kann man auch die Vorschläge der anderen sehen. Man kann auch die
-                Vorschläge der anderen upvoten oder downvoten. Man sollte verhindern Vorschläge doppelt aufzuschreiben.
-                Wenn du ein Vorschlag hast, welches bereits von jemand anderem vorgeschlagen worden ist, gebe ein upvote,
-                damit wir sehen, dass dieser Vprschlag beliebt ist</p>
-              <p class="center-text">Deine Vorschläge werden in einer Google Cloud Datenbank gelagert und mit deinem Google Konto verknüpft.</p>
+
+        <div class="center-horizontal suggest-mobile">
+          <div>
+            <div class="project-box-half-mobile relative">
+              <div class="center">
+                <div>
+                  <h1 class="center-text">Das Vorschlägesystem von Inforge</h1>
+                </div>
+              </div>
+            </div>
+            <div class="project-box-half-mobile center">
+              <div style="width: 80%; height: 95%" class="center">
+                <div>
+                  <p class="center-text">Inforge bietet ein Vorschlägesystem, welches ermöglicht, Projekte mit Communitywünschen zu entwickeln oder zu verbessern.</p>
+                  <p class="center-text">Du kannst ganz einfach ein Vorschlag schreiben bei dem jeweiligen Projekt, bei welchem
+                    du deine Ideen einbringen möchtest. Dabei kann man auch die Vorschläge der anderen sehen. Man kann auch die
+                    Vorschläge der anderen upvoten oder downvoten. Man sollte verhindern Vorschläge doppelt aufzuschreiben.
+                    Wenn du ein Vorschlag hast, welches bereits von jemand anderem vorgeschlagen worden ist, gebe ein upvote,
+                    damit wir sehen, dass dieser Vprschlag beliebt ist</p>
+                  <p class="center-text">Deine Vorschläge werden in einer Google Cloud Datenbank gelagert und mit deinem Google Konto verknüpft.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
