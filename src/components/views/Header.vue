@@ -3,7 +3,8 @@
   <div class="relative">
     <div class="center-horizontal">
       <div class="header-size flex">
-        <div class="absolute header-size center-vertical">
+        <div class="absolute">
+          <div style="height: 10px"></div>
           <div class="flex">
             <img src="../../assets/inforge-icon.png" class="inforge-icon">
           </div>

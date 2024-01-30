@@ -1,11 +1,13 @@
 <template>
 
-  <button class="ui-button center-horizontal" @click="click">
-    <p class="button-margin">{{title}}</p>
-  </button>
-  <button class="ui-button center-horizontal shadow absolute on-bottom" @click="click">
-
-  </button>
+  <div>
+    <div class="center-horizontal">
+      <div style="font-weight: bold" class="prim-color stats-text">{{data}}</div>
+    </div>
+    <div class="center-horizontal">
+      <div style="opacity: 0.5; color: #81bfff">{{title}}</div>
+    </div>
+  </div>
 
 </template>
 
@@ -13,15 +15,15 @@
 <script>
 
 export default {
-    name: "UIButton",
+    name: "StatsModule",
     data() {
         return {
         };
     },
 
     props:{
-        title: String,
-      color: String
+      title: String,
+      data: String
     },
 
     created() {

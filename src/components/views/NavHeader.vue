@@ -1,13 +1,13 @@
 <template>
 
     <div class="center-horizontal">
-      <h2 class="prim-color nav-text">Spiele</h2>
+      <h2 class="prim-color nav-text" @click="onGames">Spiele</h2>
       <div style="width: 30px"></div>
-      <h2 class="prim-color nav-text">Projekte</h2>
+      <h2 class="prim-color nav-text" @click="onProjects">Projekte</h2>
       <div style="width: 30px"></div>
-      <h2 class="prim-color nav-text">Vorschläge</h2>
+      <h2 class="prim-color nav-text" @click="onSuggestion">Vorschläge</h2>
       <div style="width: 30px"></div>
-      <h2 class="prim-color nav-text">Über Inforge</h2>
+      <h2 class="prim-color nav-text" @click="onAbout">Über Inforge</h2>
     </div>
 
 </template>

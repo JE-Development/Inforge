@@ -1,0 +1,10 @@
+.nav-text{
+  cursor: pointer;
+
+  transition: transform 250ms;
+}
+
+.nav-text:hover{
+  transform: scale(1.2,1.2);
+
+}
