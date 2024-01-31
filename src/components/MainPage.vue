@@ -203,6 +203,10 @@
         <div style="width: 10px"></div>
         <h1 class="prim-color stats-headline">DiceBluff</h1>
       </div>
+      <div class="center-horizontal">
+        <div class="white" v-if="diceBluffStatus">Serverstatus: <span class="green">online</span></div>
+        <div class="white" v-else>Serverstatus: <span class="red">offline</span></div>
+      </div>
 
       <div class="center-horizontal">
         <!-- DiceBluff    /!-->
@@ -213,11 +217,11 @@
 
         <div class="stats round-corner center">
           <div class="stats-grid-dicebluff">
+            <StatsModule title="Sitzungen online" :data="'20'"/>
             <StatsModule title="Spieler online" :data="'20'"/>
-            <StatsModule title="Spieler online" :data="'20'"/>
-            <StatsModule title="Spieler online" :data="'20'"/>
-            <StatsModule title="Spieler online" :data="'20'"/>
-            <StatsModule title="Spieler online" :data="'20'"/>
+            <StatsModule title="Sitzungen insgesamt" :data="'20'"/>
+            <StatsModule title="Sieger" :data="'20'"/>
+            <StatsModule title="Verlierer online" :data="'20'"/>
           </div>
         </div>
 
@@ -230,15 +234,19 @@
         <div style="width: 10px"></div>
         <h1 class="prim-color stats-headline">FrameGame</h1>
       </div>
+      <div class="center-horizontal">
+        <div class="white" v-if="FrameGameStatus">Serverstatus: <span class="green">online</span></div>
+        <div class="white" v-else>Serverstatus: <span class="red">offline</span></div>
+      </div>
 
       <div class="center-horizontal">
 
         <div class="stats round-corner center">
           <div class="stats-grid-framegame">
+            <StatsModule title="Sitzungen online" :data="'20'"/>
             <StatsModule title="Spieler online" :data="'20'"/>
-            <StatsModule title="Spieler online" :data="'20'"/>
-            <StatsModule title="Spieler online" :data="'20'"/>
-            <StatsModule title="Spieler online" :data="'20'"/>
+            <StatsModule title="Sitzungen insgesamt" :data="'20'"/>
+            <StatsModule title="Bilder kreiert" :data="'20'"/>
           </div>
         </div>
 
@@ -265,15 +273,44 @@ export default {
   components: {StatsModule, Header, InfoCard, UIButton, NavHeader},
     data() {
         return {
+          socket: null,
+          serverId: "",
+          diceBluffStatus: false,
+          FrameGameStatus: false
         };
     },
 
     created() {
     },
 
-    mounted() {
+  mounted() {
 
-    },
+    window.addEventListener('beforeunload', this.eventClose);
+
+    this.socket = new WebSocket(import.meta.env.VITE_SERVER_URL);
+
+    this.socket.addEventListener('open', (event) => {
+      console.log('WebSocket-Verbindung geöffnet');
+      this.diceBluffStatus = true
+
+      this.serverId = this.generateRandomString()
+
+      let dat = {
+        type: "stats",
+        func: "register",
+        args: [this.serverId]
+      };
+      this.send(dat);
+
+    });
+
+    this.socket.addEventListener('message', (event) => {
+      const message = JSON.parse(event.data)
+      //console.log(message)
+
+    });
+
+  },
 
     methods: {
 
@@ -283,6 +320,30 @@ export default {
 
       onClickDiceBluff(){
         window.open('https://dicebluff.inforge.de', '_self');
+      },
+
+      send(data){
+        this.socket.send(JSON.stringify(data))
+      },
+
+      generateRandomString() {
+        let length = 8
+        const characters = 'abcdefghijklmnopqrstuvwxyz';
+        let result = '';
+        for (let i = 0; i < length; i++) {
+          const randomIndex = Math.floor(Math.random() * characters.length);
+          result += characters.charAt(randomIndex);
+        }
+        return result;
+      },
+
+      eventClose(){
+        let dat = {
+          type: "register",
+          func: "remove",
+          args: [this.serverId]
+        }
+        this.send(dat)
       },
 
         getCookies(key){

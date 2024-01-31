@@ -238,11 +238,11 @@
 }
 
 .project-space{
-    height: 26vw;
+    height: 200px;
 }
 
 .project-space-under{
-    height: 2vw;
+    height: 210px;
 }
 
 .project-grid{
@@ -266,7 +266,7 @@
 .stats-grid-dicebluff{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 10vw;
+    gap: 7vw;
 }
 
 .stats-grid-framegame{
@@ -277,6 +277,10 @@
 
 .stats-text{
     font-size: 4em;
+}
+
+.stats-subtext{
+    font-size: 1em;
 }
 
 .stats{
@@ -498,6 +502,24 @@
     }
     .stats-headline{
         font-size: 10vw;
+    }
+}
+
+@media (max-width: 530px) {
+    .stats-text{
+        font-size: 7vw;
+    }
+
+    .stats-grid-dicebluff{
+        gap: 3vw;
+    }
+
+    .stats-subtext{
+        font-size: 3vw;
+    }
+
+    .stats{
+        height: 20vw;
     }
 }
 

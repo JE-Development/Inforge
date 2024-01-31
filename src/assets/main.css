@@ -84,6 +84,10 @@ h1, h2, h3, h4, h5, h6, p{
     color: #ff0f0f;
 }
 
+.green{
+    color: #00ff00;
+}
+
 .scroll{
     overflow-x: auto;
     padding-bottom: 10px;

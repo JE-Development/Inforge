@@ -5,7 +5,7 @@
       <div style="font-weight: bold" class="prim-color stats-text">{{data}}</div>
     </div>
     <div class="center-horizontal">
-      <div style="opacity: 0.5; color: #81bfff">{{title}}</div>
+      <div style="opacity: 0.5; color: #81bfff" class="stats-subtext center-text">{{title}}</div>
     </div>
   </div>
 
