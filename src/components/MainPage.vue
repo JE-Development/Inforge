@@ -220,8 +220,8 @@
             <StatsModule title="Sitzungen online" :data="diceBluffStats.sessionOnline"/>
             <StatsModule title="Spieler online" :data="diceBluffStats.playerOnline"/>
             <StatsModule title="Sitzungen insgesamt" :data="diceBluffStats.sessionTotal"/>
-            <StatsModule title="Sieger" :data="diceBluffStats.winner"/>
-            <StatsModule title="Verlierer online" :data="diceBluffStats.looser"/>
+            <StatsModule title="Sieger insgesamt" :data="diceBluffStats.winner"/>
+            <StatsModule title="Verlierer insgesamt" :data="diceBluffStats.looser"/>
           </div>
         </div>
 

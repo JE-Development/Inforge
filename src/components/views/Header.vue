@@ -6,7 +6,7 @@
         <div class="absolute">
           <div style="height: 10px"></div>
           <div class="flex">
-            <img src="../../assets/inforge-icon.png" class="inforge-icon">
+            <img src="../../assets/inforge-icon.png" class="inforge-icon pointer" @click="onIconClicked">
           </div>
         </div>
         <div class="header-size right center-vertical">
@@ -56,6 +56,10 @@ export default {
 
       mobileClicked(){
         this.mobileShow = !this.mobileShow
+      },
+
+      onIconClicked(){
+        this.$router.push("/")
       },
 
         getCookies(key){
