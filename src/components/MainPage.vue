@@ -83,8 +83,8 @@
       <div class="center-horizontal">
         <div class="project-box center-horizontal absolute">
           <div class="project-box-left relative">
-            <div class="absolute overflow-hidden max-width max-height">
-              <img src="../assets/content-background.jpeg" style="opacity: 0.3; width: 50vw">
+            <div class="absolute overflow-hidden max-width max-height" style="background: #000000">
+              <img src="../assets/content-background.jpeg" style="opacity: 0.5;" class="project-headline-image">
             </div>
             <div class="absolute center" style="width: 35vw; height: 700px">
               <div style="width: 30vw">
@@ -94,8 +94,8 @@
             </div>
           </div>
           <div class="project-box-right relative">
-            <div class="absolute overflow-hidden max-height" style="width: 55vw">
-              <img src="../assets/content-background-2.jpeg" style="opacity: 0.1; object-fit: contain" class="max-width max-height">
+            <div class="absolute overflow-hidden max-height" style="width: 55vw; background: #000000">
+              <img src="../assets/content-background-2.jpeg" style="opacity: 0.5; object-fit: contain" class="project-content-image">
             </div>
             <div class="absolute">
               <div class="project-grid max-height">
@@ -146,7 +146,7 @@
         <div class="center-horizontal suggest absolute max-width">
           <div class="project-box-half relative">
             <div class="absolute overflow-hidden max-width max-height">
-              <img src="../assets/content-background-3.jpeg" style="opacity: 0.3; object-fit: contain" class="max-height">
+              <img src="../assets/content-background-3.jpeg" style="opacity: 0.3; object-fit: contain" class="suggest-image">
             </div>
             <div class="absolute center" style="width: 45vw; height: 700px">
               <div class="max-width">
@@ -216,12 +216,12 @@
         <!-- Sitzungen Online, Spieler Online, Sitzungen jemals eröffnet, Bilder kreiert    /!-->
 
         <div class="stats round-corner center">
-          <div class="stats-grid-dicebluff">
-            <StatsModule title="Sitzungen online" :data="'20'"/>
-            <StatsModule title="Spieler online" :data="'20'"/>
-            <StatsModule title="Sitzungen insgesamt" :data="'20'"/>
-            <StatsModule title="Sieger" :data="'20'"/>
-            <StatsModule title="Verlierer online" :data="'20'"/>
+          <div class="stats-grid-dicebluff" v-if="diceBluffRender">
+            <StatsModule title="Sitzungen online" :data="diceBluffStats.sessionOnline"/>
+            <StatsModule title="Spieler online" :data="diceBluffStats.playerOnline"/>
+            <StatsModule title="Sitzungen insgesamt" :data="diceBluffStats.sessionTotal"/>
+            <StatsModule title="Sieger" :data="diceBluffStats.winner"/>
+            <StatsModule title="Verlierer online" :data="diceBluffStats.looser"/>
           </div>
         </div>
 
@@ -242,15 +242,17 @@
       <div class="center-horizontal">
 
         <div class="stats round-corner center">
-          <div class="stats-grid-framegame">
-            <StatsModule title="Sitzungen online" :data="'20'"/>
-            <StatsModule title="Spieler online" :data="'20'"/>
-            <StatsModule title="Sitzungen insgesamt" :data="'20'"/>
-            <StatsModule title="Bilder kreiert" :data="'20'"/>
+          <div class="stats-grid-framegame" v-if="frameGameRender">
+            <StatsModule title="Sitzungen online" :data="frameGameStats.sessionOnline"/>
+            <StatsModule title="Spieler online" :data="frameGameStats.playerOnline"/>
+            <StatsModule title="Sitzungen insgesamt" :data="frameGameStats.sessionTotal"/>
+            <StatsModule title="Bilder kreiert" :data="frameGameStats.created"/>
           </div>
         </div>
 
       </div>
+
+      <div style="height: 100px"></div>
 
     </div>
   </div>
@@ -267,6 +269,7 @@ import UIButton from "@/components/views/UIButton.vue";
 import InfoCard from "@/components/views/InfoCard.vue";
 import Header from "@/components/views/Header.vue";
 import StatsModule from "@/components/views/StatsModule.vue";
+import {nextTick} from "vue";
 
 export default {
     name: "MainPage",
@@ -276,11 +279,28 @@ export default {
           socket: null,
           serverId: "",
           diceBluffStatus: false,
-          FrameGameStatus: false
+          FrameGameStatus: false,
+          diceBluffStats: {},
+          frameGameStats: {},
+          diceBluffRender: true,
+          frameGameRender: true
         };
     },
 
     created() {
+      this.diceBluffStats = {
+        sessionOnline: "-",
+        playerOnline: "-",
+        sessionTotal: "-",
+        winner: "-",
+        looser: "-"
+      }
+      this.frameGameStats = {
+        sessionOnline: "-",
+        playerOnline: "-",
+        sessionTotal: "-",
+        created: "-",
+      }
     },
 
   mounted() {
@@ -307,7 +327,21 @@ export default {
     this.socket.addEventListener('message', (event) => {
       const message = JSON.parse(event.data)
       //console.log(message)
+      if(message.func === "stats"){
 
+        this.diceBluffRender = false
+        this.diceBluffStats = {
+          sessionOnline: message.sessionOnline,
+          playerOnline: message.playerOnline,
+          sessionTotal: message.sessionTotal,
+          winner: message.winner,
+          looser: message.looser
+        }
+        nextTick(() =>{
+          this.diceBluffRender = true
+        })
+
+      }
     });
 
   },

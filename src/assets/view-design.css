@@ -332,6 +332,20 @@
 
 }
 
+.project-content-image{
+    width: 100%;
+    height: auto;
+}
+
+.project-headline-image{
+    width: auto;
+    height: 100%;
+}
+
+.suggest-image{
+    width: 100%;
+    height: auto;
+}
 
 
 
@@ -375,6 +389,22 @@
 
 .menu-nav{
     display: flex;
+}
+
+@media (max-width: 1580px) {
+    .suggest-image{
+        width: auto;
+        height: 100%;
+    }
+}
+
+
+@media (max-width: 1300px) {
+    .project-content-image{
+        width: auto;
+        height: 100%;
+    }
+
 }
 
 @media (max-width: 1130px) {
