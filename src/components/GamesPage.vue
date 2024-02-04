@@ -3,7 +3,7 @@
   <div>
     <Header/>
 
-    <div class="games-module-left">
+    <div class="games-module-left shadow-dicebluff dicebluff-background">
       <div class="center-horizontal">
         <img src="../assets/raute-dice.png" class="stats-raute">
         <div style="width: 10px"></div>
@@ -46,7 +46,7 @@
     <div style="height: 50px"></div>
 
     <div class="right">
-      <div class="games-module-right">
+      <div class="games-module-right shadow-framegame framegame-background">
         <div class="center-horizontal">
           <img src="../assets/raute-frame.png" class="stats-raute">
           <div style="width: 10px"></div>
@@ -70,6 +70,7 @@
               nachbauen.</p>
             <p class="center-text">So kommt es oft zu Missverständnissen und es entsteht eine unterhaltsame Kette
               von Bildern, ähnlich wie bei "Stille Post".</p>
+            <p class="center-text">Dieses Projekt befindet sich noch in der Entwicklung und wird in naher Zukuft veröffentlicht.</p>
           </div>
         </div>
         <div class="center-horizontal">
@@ -84,6 +85,51 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div style="height: 50px"></div>
+
+    <div class="games-module-left shadow-amongus amongus-background">
+      <div class="center-horizontal">
+        <img src="../assets/raute-amongus.png" class="stats-raute">
+        <div style="width: 10px"></div>
+        <h1 class="prim-color stats-headline">AmongUsLive</h1>
+      </div>
+      <div class="center-horizontal">
+        <div style="width: 95%; height: 95%">
+          <p class="center-text">AmongUsLive ist eine Variante von AmongUs, die im echten Leben gespielt werden kann.</p>
+          <p class="center-text">Das Spiel funktioniert so, dass in den Gebäuden, in denen AmongUsLive gespielt wird, QR-Codes
+            angebracht werden müssen, die gescannt werden können, um die auf dem Handy angezeigten Aufgaben zu lösen. Jeder
+            Spieler erhält auf seinem Handy die Aufgaben, die er erledigen muss. Auf diese Weise weiß er, welche QR-Codes er
+            scannen muss. Es ist auch möglich, eine Karte des Spielfelds hochzuladen, damit jeder Spieler weiß, wo sich seine
+            Aufgaben befinden.</p>
+          <p class="center-text">Der Imposter kann Spieler eliminieren, indem er beispielsweise einen Spieler antippt. Die
+            genaue Umsetzung bleibt der Spielergruppe überlassen, über die sie sich einigen müssen.</p>
+          <p class="center-text">Sabotagen werden so umgesetzt, dass der Imposter über sein Handy eine Sabotage starten kann
+            und die Spieler spezielle QR-Codes scannen müssen, um die Sabotage zu beheben.</p>
+          <p class="center-text">Meetings werden so organisiert, dass, wenn ein Spieler ein Meeting einberuft, alle Spieler
+            eine Benachrichtigung auf ihrem Handy erhalten, dass ein Meeting stattfindet, und dass sie sich an einem festgelegten
+            Ort treffen müssen. Sobald sich alle Spieler getroffen haben, kann der Spieler, der das Meeting einberufen hat, das
+            Meeting starten, sobald er feststellt, dass sich alle Spieler am festgelegten Treffpunkt befinden. Bei Meetings
+            stimmen die Spieler auf ihren Handys ab und sehen dann das Ergebnis, nachdem alle Spieler abgestimmt haben.</p>
+          <p class="center-text">Es gibt auch eine Zusatzfunktion, bei der eine Oberfläche dauerhaft auf einem Fernseher oder
+            einer Leinwand angezeigt werden kann. Diese dient dazu, den Fortschritt bei den gelösten Aufgaben zu verfolgen oder
+            in Echtzeit zu sehen, wo gerade eine Aufgabe gelöst wird. Außerdem können Meetings darüber organisiert werden, sodass
+            das Votingergebnis auf der Leinwand oder dem Fernseher angezeigt werden kann.</p>
+          <p class="center-text">Dieses Projekt befindet sich noch in der Entwicklung und wird in naher Zukunft noch nicht veröffentlicht.</p>
+        </div>
+      </div>
+      <!--<div class="center-horizontal">
+        <div class="games-display-button">
+          <div class="center-horizontal">
+            <UIButton :title="'Zu DiceBluff'" @click="onClickDiceBluff"/>
+          </div>
+          <div style="width: 20px"></div>
+          <div class="center-horizontal">
+            <UIButton :title="'Vollständige Spielanleitung'" @click="onClickDiceBluffInstructions" customClasses="wide-ui-button"/>
+          </div>
+        </div>
+      </div>/!-->
     </div>
 
     <div style="height: 50px"></div>

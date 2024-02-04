@@ -125,6 +125,21 @@
     box-shadow: 0px 0px 10px #ff8500;
 }
 
+.shadow-dicebluff{
+    box-shadow: 0px 0px 10px #ff8500;
+    clip-path: inset(-15px -15px -15px 0px);
+}
+
+.shadow-framegame{
+    box-shadow: 0px 0px 10px #5BFF00;
+    clip-path: inset(-15px 0px -15px -15px);
+}
+
+.shadow-amongus{
+    box-shadow: 0px 0px 10px #0066FF;
+    clip-path: inset(-15px -15px -15px 0px);
+}
+
 
 .white-background{
     background: #ffffff;
@@ -342,8 +357,8 @@
 }
 
 .project-headline-image{
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
 }
 
 .suggest-image{
@@ -395,12 +410,24 @@
     display: flex;
 }
 
+.dicebluff-background{
+    background: rgba(255, 173, 0, 0.07);
+}
+
+.framegame-background{
+    background: rgba(91, 255, 0, 0.07);
+}
+
+.amongus-background{
+    background: rgba(0, 102, 255, 0.07);
+}
+
 .games-module-left{
     width: 90vw;
     height: auto;
     border-bottom-right-radius: 40px;
     border-top-right-radius: 40px;
-    background: rgba(255, 173, 0, 0.07);
+
 }
 
 .games-module-right{
@@ -408,11 +435,17 @@
     height: auto;
     border-bottom-left-radius: 40px;
     border-top-left-radius: 40px;
-    background: rgba(0, 102, 255, 0.07);
 }
 
 .games-display-button{
     display: flex;
+}
+
+@media (max-width: 1990px) {
+    .project-headline-image{
+        width: auto;
+        height: 100%;
+    }
 }
 
 @media (max-width: 1580px) {

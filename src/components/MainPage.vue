@@ -21,7 +21,7 @@
                 <div class="main-field-logo center-horizontal">
                   <img src="../assets/inforge-icon-text.png" class="inforge-text">
                 </div>
-                <h3 class="main-field-content center-text">Inforge - Browser Games und Coding Projekte</h3>
+                <h2 class="main-field-content center-text">Browser Games und Coding Projekte</h2>
                 <p class="main-field-content center-text">Inforge ist eine Platform und Sammelstelle für Projekte von Jason Enns.<br>
                   Inforge bietet dabei Projekte in Form von Browser Games und Open Source Coding Projekte.</p>
                 <p class="main-field-content center-text">Inforge bietet auch eine Platform für den Austausch von Ideen, Vorschlägen und Bug Reports von Projekten.<br>
