@@ -10,7 +10,7 @@
         </div>
         <div class="center-horizontal">
           <button class="infocard-button center-horizontal" @click="click">
-            <p class="button-margin">{{title}}</p>
+            <p class="button-margin">{{button}}</p>
           </button>
         </div>
         <div style="height: 10px"></div>

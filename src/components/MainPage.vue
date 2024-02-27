@@ -3,9 +3,12 @@
   <div class="relative max-width">
 
     <div class="absolute overflow-hidden max-width">
-      <img src="../assets/background.jpeg" class="background-image">
+      <img src="../assets/background.png" class="background-image on-top">
 
-
+      <div class="center-horizontal relative on-bottom">
+        <img src="../assets/chain.png" class="chain-image absolute" style="transform: translate(500px, -350px)">
+        <img src="../assets/chain.png" class="chain-image absolute" style="transform: translate(-500px, -350px)">
+      </div>
     </div>
 
     <div class="absolute">
@@ -79,7 +82,6 @@
       </div>
 
       <div class="project-space"></div>
-
       <div class="center-horizontal">
         <div class="project-box center-horizontal absolute">
           <div class="project-box-left relative">
@@ -103,7 +105,7 @@
                   <InfoCard title="AmongUsLive" :button="'Weitere Infos'" teaser="AmongUsLive ist eine AmongUs Version die man im echten Leben spielen kann. Dieses Browsergame versucht das Spielerlebnis und die Spannung um echten Leben zu simulieren. Dabei ist dein Smartphone dein Wegbegleiter. Dieses Projekt liegt vorerst auf Eis, weil es in der Entwicklung zu komplikationen kam und andere Projekte vorrang hatten."/>
                 </div>
                 <div class="max-width max-height center" style="transform: translate(150px, 60px)">
-                  <InfoCard title="DiceBluffAndroid" :button="'Weitere Infos'" teaser="DiceBluffAndroid ist die Android Version von DiceBluff. Dieses Projekt ist jetzt erst enstatnden und steht noch in den Startlöchern."/>
+                  <InfoCard title="DiscordBot" :button="'Weitere Infos'" teaser="DiscordBot ist ein selbstprogrammierter Discord Bot. Dieses Projekt steht noch in den Startlöchern und wartet darauf mit Features der Community gefüllt zu werden."/>
                 </div>
                 <div class="max-width max-height center" style="transform: translate(50px, -100px)">
                   <InfoCard title="RaspiWindow" :button="'Weitere Infos'" teaser="RaspiWindow ist ein Smart Window. Es zeigt dir verschidene Informationen zu verschiedene Dinge an. Das Projekt ist eine Weseite, die damals von meinem Raspberry Pi 3b+ angezeigt wurde. Das Projekt ist bis jetzt nur für meine private Anwendung konzipiert. Es folgt noch eine communitytaugliche Version."/>

@@ -12,6 +12,10 @@ h1, h2, h3, h4, h5, h6, p{
     z-index: -9999;
 }
 
+.on-less-bottom{
+    z-index: -999;
+}
+
 .on-top{
     z-index: 9999;
 }
@@ -116,7 +120,7 @@ h1, h2, h3, h4, h5, h6, p{
     width: 100vw;
     object-fit: contain;
     transform: translateY(-300px);
-    opacity: 0.4;
+    /*opacity: 0.4;*/
 }
 
 .button-margin{

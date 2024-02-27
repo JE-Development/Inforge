@@ -1,10 +1,7 @@
 <template>
 
-  <button class="ui-button center-horizontal" @click="click" :class="customClasses">
+  <button class="ui-button center-horizontal shadow" @click="click" :class="customClasses">
     <p class="button-margin">{{title}}</p>
-  </button>
-  <button class="ui-button center-horizontal shadow absolute on-bottom" @click="click" :class="customClasses">
-
   </button>
 
 </template>
