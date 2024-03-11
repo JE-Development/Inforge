@@ -83,7 +83,7 @@
 
       <div class="project-space"></div>
       <div class="center-horizontal">
-        <div class="project-box center-horizontal absolute">
+        <div class="project-box center-horizontal absolute on-top">
           <div class="project-box-left relative">
             <div class="absolute overflow-hidden max-width max-height" style="background: #000000">
               <img src="../assets/content-background.jpeg" style="opacity: 0.5;" class="project-headline-image">
@@ -115,9 +115,9 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
+
 
         <div class="full-size center-horizontal">
 
@@ -142,13 +142,20 @@
         </div>
       </div>
 
+
       <div class="project-space-under"></div>
+
+
+      <div class="center-horizontal on-bottom">
+        <img src="../assets/chain.png" class="chain-image absolute" style="transform: translate(-500px, -200px)">
+        <img src="../assets/chain.png" class="chain-image absolute" style="transform: translate(500px, -200px)">
+      </div>
 
       <div>
         <div class="center-horizontal suggest absolute max-width">
           <div class="project-box-half relative">
-            <div class="absolute overflow-hidden max-width max-height">
-              <img src="../assets/content-background-3.jpeg" style="opacity: 0.3; object-fit: contain" class="suggest-image">
+            <div class="absolute overflow-hidden max-width max-height" style="background: #000000">
+              <img src="../assets/content-background-3.jpeg" style="opacity: 0.4; object-fit: contain" class="suggest-image">
             </div>
             <div class="absolute center" style="width: 45vw; height: 700px">
               <div class="max-width">
@@ -157,7 +164,7 @@
               </div>
             </div>
           </div>
-          <div class="project-box-half center">
+          <div class="project-box-half center" style="background: #000000">
             <div style="width: 80%; height: 95%" class="center">
               <div>
                 <p class="center-text">Inforge bietet ein Vorschlägesystem, welches ermöglicht, Projekte mit Communitywünschen zu entwickeln oder zu verbessern.</p>
