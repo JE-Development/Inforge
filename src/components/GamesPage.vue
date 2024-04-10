@@ -3,7 +3,7 @@
   <div>
     <Header/>
 
-    <div class="games-module-left shadow-dicebluff dicebluff-background">
+    <div class="games-module-left shadow-dicebluff dicebluff-background" id="scroll-dicebluff">
       <div class="center-horizontal">
         <img src="../assets/raute-dice.png" class="stats-raute">
         <div style="width: 10px"></div>
@@ -46,7 +46,7 @@
     <div style="height: 50px"></div>
 
     <div class="right">
-      <div class="games-module-right shadow-framegame framegame-background">
+      <div class="games-module-right shadow-framegame framegame-background" id="scroll-framegame">
         <div class="center-horizontal">
           <img src="../assets/raute-frame.png" class="stats-raute">
           <div style="width: 10px"></div>
@@ -89,7 +89,7 @@
 
     <div style="height: 50px"></div>
 
-    <div class="games-module-left shadow-amongus amongus-background">
+    <div class="games-module-left shadow-amongus amongus-background" id="scroll-amonguslive">
       <div class="center-horizontal">
         <img src="../assets/raute-amongus.png" class="stats-raute">
         <div style="width: 10px"></div>
@@ -145,6 +145,7 @@ import NavHeader from "@/components/views/NavHeader.vue";
 import NavMobile from "@/components/views/NavMobile.vue";
 import Header from "@/components/views/Header.vue";
 import UIButton from "@/components/views/UIButton.vue";
+import {nextTick} from "vue";
 
 export default {
     name: "GamesPage",
@@ -158,11 +159,26 @@ export default {
     },
 
     mounted() {
+      nextTick(() => {
+        this.scrollToHash();
+      });
     },
 
 
 
     methods: {
+
+      scrollToHash() {
+        const hash = window.location.hash;
+        if (hash) {
+          const element = document.querySelector(hash);
+          if (element) {
+            nextTick(() => {
+              element.scrollIntoView({ behavior: 'smooth' });
+            })
+          }
+        }
+      },
 
       onClickDiceBluff(){
         window.open('https://dicebluff.inforge.de', '_self');

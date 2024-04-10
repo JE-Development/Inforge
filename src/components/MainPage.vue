@@ -59,6 +59,9 @@
               <div class="center-horizontal">
                 <UIButton :title="'Zu DiceBluff'" @click="onClickDiceBluff"/>
               </div>
+              <div class="center-horizontal">
+                <UIButton :title="'Weitere Informationen'" @click="onProjectDiceBluff" customClasses="wide-ui-button"/>
+              </div>
             </div>
             <div style="width: 10%"></div>
             <div class="main-card round-corner relative">
@@ -74,6 +77,9 @@
               </div>
               <div class="center-horizontal">
                 <UIButton :title="'Zu FrameGame'" @click="onClickFrameGame"/>
+              </div>
+              <div class="center-horizontal">
+                <UIButton :title="'Weitere Informationen'" @click="onProjectFrameGame" customClasses="wide-ui-button"/>
               </div>
             </div>
             <div style="width: 5%"></div>
@@ -102,16 +108,16 @@
             <div class="absolute max-width">
               <div class="project-grid max-height">
                 <div class="max-width max-height center" style="transform: translate(100px, -100px)">
-                  <InfoCard title="AmongUsLive" :button="'Weitere Infos'" teaser="AmongUsLive ist eine AmongUs Version die man im echten Leben spielen kann. Dieses Browsergame versucht das Spielerlebnis und die Spannung um echten Leben zu simulieren. Dabei ist dein Smartphone dein Wegbegleiter. Dieses Projekt liegt vorerst auf Eis, weil es in der Entwicklung zu komplikationen kam und andere Projekte vorrang hatten."/>
+                  <InfoCard title="AmongUsLive" :button="'Weitere Infos'" teaser="AmongUsLive ist eine AmongUs Version die man im echten Leben spielen kann. Dieses Browsergame versucht das Spielerlebnis und die Spannung um echten Leben zu simulieren. Dabei ist dein Smartphone dein Wegbegleiter. Dieses Projekt liegt vorerst auf Eis, weil es in der Entwicklung zu komplikationen kam und andere Projekte vorrang hatten." @clicked="onProjectAmongUsLive"/>
                 </div>
                 <div class="max-width max-height center" style="transform: translate(0px, 60px)">
-                  <InfoCard title="DiscordBot" :button="'Weitere Infos'" teaser="DiscordBot ist ein selbstprogrammierter Discord Bot. Dieses Projekt steht noch in den Startlöchern und wartet darauf mit Features der Community gefüllt zu werden."/>
+                  <InfoCard title="DiscordBot" :button="'Weitere Infos'" teaser="DiscordBot ist ein selbstprogrammierter Discord Bot. Dieses Projekt steht noch in den Startlöchern und wartet darauf mit Features der Community gefüllt zu werden." @clicked="onProjectDiscordBot"/>
                 </div>
                 <div class="max-width max-height center" style="transform: translate(50px, -100px)">
-                  <InfoCard title="RaspiWindow" :button="'Weitere Infos'" teaser="RaspiWindow ist ein Smart Window. Es zeigt dir verschidene Informationen zu verschiedene Dinge an. Das Projekt ist eine Weseite, die damals von meinem Raspberry Pi 3b+ angezeigt wurde. Das Projekt ist bis jetzt nur für meine private Anwendung konzipiert. Es folgt noch eine communitytaugliche Version."/>
+                  <InfoCard title="RaspiWindow" :button="'Weitere Infos'" teaser="RaspiWindow ist ein Smart Window. Es zeigt dir verschidene Informationen zu verschiedene Dinge an. Das Projekt ist eine Weseite, die damals von meinem Raspberry Pi 3b+ angezeigt wurde. Das Projekt ist bis jetzt nur für meine private Anwendung konzipiert. Es folgt noch eine communitytaugliche Version." @clicked="onProjectRaspiWindow"/>
                 </div>
                 <div class="max-width max-height center" style="transform: translate(-100px, 80px)">
-                  <InfoCard title="MinecraftPlugin" :button="'Weitere Infos'" teaser="Ich habe auch ein Minecraft Plugin für allgemeine Serverzwecke entwickelt. Das Plugin beinhaltet ein Chunkloadersystem, Titelsystem und eine creative Bauwelt. Dieses Projekt wurde nur für private zwecke entwickelt. Eine communitytaugliche Version wird noch folgen."/>
+                  <InfoCard title="Intercra" :button="'Weitere Infos'" teaser="Intercra ist eine benutzerdefinierte Suchmaschine, die Suchergebnisse anhand von Voreingestellten Webseiten anzeigen kann. Dieses Projekt ist im Ramen meiner Abiturprüfung entstanden." @clicked="onProjectIntercra"/>
                 </div>
               </div>
             </div>
@@ -124,17 +130,17 @@
           <div class="project-box-mobile center-horizontal" style="width: 95vw">
             <div class="project-box-right">
               <div class="project-grid max-height max-width">
-                <div class="max-width max-height center">
-                  <InfoCard title="AmongUsLive" :button="'Weitere Infos'" teaser="AmongUsLive ist eine AmongUs Version die man im echten Leben spielen kann. Dieses Browsergame versucht das Spielerlebnis und die Spannung um echten Leben zu simulieren. Dabei ist dein Smartphone dein Wegbegleiter. Dieses Projekt liegt vorerst auf Eis, weil es in der Entwicklung zu komplikationen kam und andere Projekte vorrang hatten."/>
+                <div class="max-width max-height center" style="transform: translate(100px, -100px)">
+                  <InfoCard title="AmongUsLive" :button="'Weitere Infos'" teaser="AmongUsLive ist eine AmongUs Version die man im echten Leben spielen kann. Dieses Browsergame versucht das Spielerlebnis und die Spannung um echten Leben zu simulieren. Dabei ist dein Smartphone dein Wegbegleiter. Dieses Projekt liegt vorerst auf Eis, weil es in der Entwicklung zu komplikationen kam und andere Projekte vorrang hatten." @clicked="onProjectAmongUsLive"/>
                 </div>
-                <div class="max-width max-height center">
-                  <InfoCard title="DiceBluffAndroid" :button="'Weitere Infos'" teaser="DiceBluffAndroid ist die Android Version von DiceBluff. Dieses Projekt ist jetzt erst enstatnden und steht noch in den Startlöchern."/>
+                <div class="max-width max-height center" style="transform: translate(0px, 60px)">
+                  <InfoCard title="DiscordBot" :button="'Weitere Infos'" teaser="DiscordBot ist ein selbstprogrammierter Discord Bot. Dieses Projekt steht noch in den Startlöchern und wartet darauf mit Features der Community gefüllt zu werden." @clicked="onProjectDiscordBot"/>
                 </div>
-                <div class="max-width max-height center">
-                  <InfoCard title="RaspiWindow" :button="'Weitere Infos'" teaser="RaspiWindow ist ein Smart Window. Es zeigt dir verschidene Informationen zu verschiedene Dinge an. Das Projekt ist eine Weseite, die damals von meinem Raspberry Pi 3b+ angezeigt wurde. Das Projekt ist bis jetzt nur für meine private Anwendung konzipiert. Es folgt noch eine communitytaugliche Version."/>
+                <div class="max-width max-height center" style="transform: translate(50px, -100px)">
+                  <InfoCard title="RaspiWindow" :button="'Weitere Infos'" teaser="RaspiWindow ist ein Smart Window. Es zeigt dir verschidene Informationen zu verschiedene Dinge an. Das Projekt ist eine Weseite, die damals von meinem Raspberry Pi 3b+ angezeigt wurde. Das Projekt ist bis jetzt nur für meine private Anwendung konzipiert. Es folgt noch eine communitytaugliche Version." @clicked="onProjectRaspiWindow"/>
                 </div>
-                <div class="max-width max-height center">
-                  <InfoCard title="MinecraftPlugin" :button="'Weitere Infos'" teaser="Ich habe auch ein Minecraft Plugin für allgemeine Serverzwecke entwickelt. Das Plugin beinhaltet ein Chunkloadersystem, Titelsystem und eine creative Bauwelt. Dieses Projekt wurde nur für private zwecke entwickelt. Eine communitytaugliche Version wird noch folgen."/>
+                <div class="max-width max-height center" style="transform: translate(-100px, 80px)">
+                  <InfoCard title="Intercra" :button="'Weitere Infos'" teaser="Intercra ist eine benutzerdefinierte Suchmaschine, die Suchergebnisse anhand von Voreingestellten Webseiten anzeigen kann. Dieses Projekt ist im Ramen meiner Abiturprüfung entstanden." @clicked="onProjectIntercra"/>
                 </div>
               </div>
             </div>
@@ -356,6 +362,30 @@ export default {
   },
 
     methods: {
+
+      onProjectIntercra(){
+        this.$router.push({ path: '/projects', hash: '#scroll-intercra' });
+      },
+
+      onProjectRaspiWindow(){
+        this.$router.push({ path: '/projects', hash: '#scroll-raspiwindow' });
+      },
+
+      onProjectDiscordBot(){
+        this.$router.push({ path: '/projects', hash: '#scroll-discordbot' });
+      },
+
+      onProjectAmongUsLive(){
+        this.$router.push({ path: '/games', hash: '#scroll-amonguslive' });
+      },
+
+      onProjectFrameGame(){
+        this.$router.push({ path: '/games', hash: '#scroll-framegame' });
+      },
+
+      onProjectDiceBluff(){
+        this.$router.push({ path: '/games', hash: '#scroll-dicebluff' });
+      },
 
       onClickFrameGame(){
         window.open('https://framegame.inforge.de', '_self');
