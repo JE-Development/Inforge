@@ -256,16 +256,29 @@
 .project-box-half{
     width: 45vw;
     height: 700px;
-    border-image: linear-gradient(#29414d, #072670) 30;
+    border-image: linear-gradient(#497c85, #6c95f8) 30;
     border-width: 2px;
     border-style: solid;
 }
 
 .project-box-half-mobile{
     width: 95vw;
-    border-image: linear-gradient(#29414d, #072670) 30;
+    border-image: linear-gradient(#497c85, #6c95f8) 30;
     border-width: 2px;
     border-style: solid;
+}
+
+.project-page-box{
+    width: 70vw;
+    border-image: linear-gradient(#497c85, #6c95f8) 30;
+    border-width: 4px;
+    border-style: solid;
+}
+
+.project-page-headline{
+    background: #1a1a1a;
+    padding: 10px;
+    height: 30px;
 }
 
 .project-space{
