@@ -4,10 +4,10 @@
       <h2 class="prim-color nav-text" @click="onGames">Spiele</h2>
       <div style="width: 30px"></div>
       <h2 class="prim-color nav-text" @click="onProjects">Projekte</h2>
+      <!--<div style="width: 30px"></div>
+      <h2 class="prim-color nav-text" @click="onSuggestion">Vorschläge</h2>/!-->
       <div style="width: 30px"></div>
-      <h2 class="prim-color nav-text" @click="onSuggestion">Vorschläge</h2>
-      <div style="width: 30px"></div>
-      <h2 class="prim-color nav-text" @click="onAbout">Über Inforge</h2>
+      <h2 class="prim-color nav-text" @click="onImpressum">Impressum</h2>
     </div>
 
 </template>
@@ -43,8 +43,8 @@ export default {
       onSuggestion(){
         this.$router.push("/suggestion")
       },
-      onAbout(){
-        this.$router.push("/about")
+      onImpressum(){
+        this.$router.push("/impressum")
       },
 
         getCookies(key){

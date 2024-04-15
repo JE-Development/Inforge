@@ -127,20 +127,28 @@
 
         <div class="full-size center-horizontal">
 
-          <div class="project-box-mobile center-horizontal" style="width: 95vw">
-            <div class="project-box-right">
-              <div class="project-grid max-height max-width">
-                <div class="max-width max-height center" style="transform: translate(100px, -100px)">
-                  <InfoCard title="AmongUsLive" :button="'Weitere Infos'" teaser="AmongUsLive ist eine AmongUs Version die man im echten Leben spielen kann. Dieses Browsergame versucht das Spielerlebnis und die Spannung um echten Leben zu simulieren. Dabei ist dein Smartphone dein Wegbegleiter. Dieses Projekt liegt vorerst auf Eis, weil es in der Entwicklung zu komplikationen kam und andere Projekte vorrang hatten." @clicked="onProjectAmongUsLive"/>
-                </div>
-                <div class="max-width max-height center" style="transform: translate(0px, 60px)">
-                  <InfoCard title="DiscordBot" :button="'Weitere Infos'" teaser="DiscordBot ist ein selbstprogrammierter Discord Bot. Dieses Projekt steht noch in den Startlöchern und wartet darauf mit Features der Community gefüllt zu werden." @clicked="onProjectDiscordBot"/>
-                </div>
-                <div class="max-width max-height center" style="transform: translate(50px, -100px)">
-                  <InfoCard title="RaspiWindow" :button="'Weitere Infos'" teaser="RaspiWindow ist ein Smart Window. Es zeigt dir verschidene Informationen zu verschiedene Dinge an. Das Projekt ist eine Weseite, die damals von meinem Raspberry Pi 3b+ angezeigt wurde. Das Projekt ist bis jetzt nur für meine private Anwendung konzipiert. Es folgt noch eine communitytaugliche Version." @clicked="onProjectRaspiWindow"/>
-                </div>
-                <div class="max-width max-height center" style="transform: translate(-100px, 80px)">
-                  <InfoCard title="Intercra" :button="'Weitere Infos'" teaser="Intercra ist eine benutzerdefinierte Suchmaschine, die Suchergebnisse anhand von Voreingestellten Webseiten anzeigen kann. Dieses Projekt ist im Ramen meiner Abiturprüfung entstanden." @clicked="onProjectIntercra"/>
+          <div class="project-box-mobile">
+            <div class="project-box-up">
+              <div>
+                <h1 class="center-text">Weitere Projekte</h1>
+                <p class="center-text">Hier sind weitere Projekte die in Arbeit sind. Die meisten sind erst am Anfang in der Entwicklung und noch sehr unausgereift.</p>
+              </div>
+            </div>
+            <div class="project-box-mobile center-horizontal" style="width: 95vw">
+              <div class="project-box-down">
+                <div class="project-grid max-height max-width">
+                  <div class="max-width max-height center">
+                    <InfoCard title="AmongUsLive" :button="'Weitere Infos'" teaser="AmongUsLive ist eine AmongUs Version die man im echten Leben spielen kann. Dieses Browsergame versucht das Spielerlebnis und die Spannung um echten Leben zu simulieren. Dabei ist dein Smartphone dein Wegbegleiter. Dieses Projekt liegt vorerst auf Eis, weil es in der Entwicklung zu komplikationen kam und andere Projekte vorrang hatten." @clicked="onProjectAmongUsLive"/>
+                  </div>
+                  <div class="max-width max-height center">
+                    <InfoCard title="DiscordBot" :button="'Weitere Infos'" teaser="DiscordBot ist ein selbstprogrammierter Discord Bot. Dieses Projekt steht noch in den Startlöchern und wartet darauf mit Features der Community gefüllt zu werden." @clicked="onProjectDiscordBot"/>
+                  </div>
+                  <div class="max-width max-height center">
+                    <InfoCard title="RaspiWindow" :button="'Weitere Infos'" teaser="RaspiWindow ist ein Smart Window. Es zeigt dir verschidene Informationen zu verschiedene Dinge an. Das Projekt ist eine Weseite, die damals von meinem Raspberry Pi 3b+ angezeigt wurde. Das Projekt ist bis jetzt nur für meine private Anwendung konzipiert. Es folgt noch eine communitytaugliche Version." @clicked="onProjectRaspiWindow"/>
+                  </div>
+                  <div class="max-width max-height center">
+                    <InfoCard title="Intercra" :button="'Weitere Infos'" teaser="Intercra ist eine benutzerdefinierte Suchmaschine, die Suchergebnisse anhand von Voreingestellten Webseiten anzeigen kann. Dieses Projekt ist im Ramen meiner Abiturprüfung entstanden." @clicked="onProjectIntercra"/>
+                  </div>
                 </div>
               </div>
             </div>
@@ -165,21 +173,29 @@
             </div>
             <div class="absolute center" style="width: 45vw; height: 700px">
               <div class="max-width">
+                <!--
                 <h1 class="center-text">Das Vorschlägesystem von Inforge</h1>
-                <p class="center-text">Hier findest du eine kurze Einführung zum Vorschlägesystem</p>
+                <p class="center-text">Hier findest du eine kurze Einführung zum Vorschlägesystem</p>/!-->
+                <h1 class="center-text">Ideen für weitere Projekte</h1>
+                <p class="center-text">Hier sieht man Ideen zu Projekten die ich umsetzen möchte</p>
               </div>
             </div>
           </div>
           <div class="project-box-half center" style="background: #000000">
             <div style="width: 80%; height: 95%" class="center">
               <div>
-                <p class="center-text">Inforge bietet ein Vorschlägesystem, welches ermöglicht, Projekte mit Communitywünschen zu entwickeln oder zu verbessern.</p>
+                <!--<p class="center-text">Inforge bietet ein Vorschlägesystem, welches ermöglicht, Projekte mit Communitywünschen zu entwickeln oder zu verbessern.</p>
                 <p class="center-text">Du kannst ganz einfach ein Vorschlag schreiben bei dem jeweiligen Projekt, bei welchem
                   du deine Ideen einbringen möchtest. Dabei kann man auch die Vorschläge der anderen sehen. Man kann auch die
                   Vorschläge der anderen upvoten oder downvoten. Man sollte verhindern Vorschläge doppelt aufzuschreiben.
                   Wenn du ein Vorschlag hast, welches bereits von jemand anderem vorgeschlagen worden ist, gebe ein upvote,
                   damit wir sehen, dass dieser Vprschlag beliebt ist</p>
                 <p class="center-text">Deine Vorschläge werden in einer Google Cloud Datenbank gelagert und mit deinem Google Konto verknüpft.</p>
+                /!-->
+                <IdeasCard title="Mensch ärgere dich nicht mit Powerups" teaser="Mensch ärgere dich nicht spannender gestalten durch Verwendung von Powerups die das Spielerlebnis erweitern und spannender machen."/>
+                <IdeasCard title="BattleFlag" teaser="Eine Adaption vom alten ICQ spiel namens 'RPS'. Ein gGemisch aus Schere Stein Papier und Schach."/>
+                <IdeasCard title="OpenBG" teaser="Eine Sammelstelle von Browsergames-Lobbys. Eine Platform wo die private Lobby eines Browsergames gelistet ist damit auch fremde Spieler die Lobby beitreten können."/>
+                <IdeasCard title="LEDSteuerung" teaser="Eine LED-Steuerungssoftware mit der man LEDs steuern kann. Spezialisiert auf ansteuerbare LEDs wie zb WS2812 LEDs."/>
               </div>
             </div>
           </div>
@@ -190,26 +206,33 @@
             <div class="project-box-half-mobile relative">
               <div class="center">
                 <div>
-                  <h1 class="center-text">Das Vorschlägesystem von Inforge</h1>
+                  <!--<h1 class="center-text">Das Vorschlägesystem von Inforge</h1>/!-->
+                  <h1 class="center-text">Ideen für weitere Projekte</h1>
+                  <p class="center-text">Hier sieht man Ideen zu Projekten die ich umsetzen möchte</p>
                 </div>
               </div>
             </div>
             <div class="project-box-half-mobile center">
               <div style="width: 80%; height: 95%" class="center">
                 <div>
-                  <p class="center-text">Inforge bietet ein Vorschlägesystem, welches ermöglicht, Projekte mit Communitywünschen zu entwickeln oder zu verbessern.</p>
+                  <!--<p class="center-text">Inforge bietet ein Vorschlägesystem, welches ermöglicht, Projekte mit Communitywünschen zu entwickeln oder zu verbessern.</p>
                   <p class="center-text">Du kannst ganz einfach ein Vorschlag schreiben bei dem jeweiligen Projekt, bei welchem
                     du deine Ideen einbringen möchtest. Dabei kann man auch die Vorschläge der anderen sehen. Man kann auch die
                     Vorschläge der anderen upvoten oder downvoten. Man sollte verhindern Vorschläge doppelt aufzuschreiben.
                     Wenn du ein Vorschlag hast, welches bereits von jemand anderem vorgeschlagen worden ist, gebe ein upvote,
                     damit wir sehen, dass dieser Vprschlag beliebt ist</p>
-                  <p class="center-text">Deine Vorschläge werden in einer Google Cloud Datenbank gelagert und mit deinem Google Konto verknüpft.</p>
+                  <p class="center-text">Deine Vorschläge werden in einer Google Cloud Datenbank gelagert und mit deinem Google Konto verknüpft.</p>/!-->
+                  <IdeasCard title="Mensch ärgere dich nicht mit Powerups" teaser="Mensch ärgere dich nicht spannender gestalten durch Verwendung von Powerups die das Spielerlebnis erweitern und spannender machen."/>
+                  <IdeasCard title="BattleFlag" teaser="Eine Adaption vom alten ICQ spiel namens 'RPS'. Ein gGemisch aus Schere Stein Papier und Schach."/>
+                  <IdeasCard title="OpenBG" teaser="Eine Sammelstelle von Browsergames-Lobbys. Eine Platform wo die private Lobby eines Browsergames gelistet ist damit auch fremde Spieler die Lobby beitreten können."/>
+                  <IdeasCard title="LEDSteuerung" teaser="Eine LED-Steuerungssoftware mit der man LEDs steuern kann. Spezialisiert auf ansteuerbare LEDs wie zb WS2812 LEDs."/>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
 
       <div class="stats-space"></div>
 
@@ -285,10 +308,11 @@ import InfoCard from "@/components/views/InfoCard.vue";
 import Header from "@/components/views/Header.vue";
 import StatsModule from "@/components/views/StatsModule.vue";
 import {nextTick} from "vue";
+import IdeasCard from "@/components/views/IdeasCard.vue";
 
 export default {
     name: "MainPage",
-  components: {StatsModule, Header, InfoCard, UIButton, NavHeader},
+  components: {IdeasCard, StatsModule, Header, InfoCard, UIButton, NavHeader},
     data() {
         return {
           socket: null,

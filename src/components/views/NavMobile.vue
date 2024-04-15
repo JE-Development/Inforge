@@ -3,20 +3,17 @@
     <div class="relative">
       <div class="center-horizontal" @click="outsideClicked">
         <div class="mobile-nav round-corner">
-          <div class="mobile-nav-module center-horizontal pointer round-corner" @click="onMain">
-            <h1>Startseite</h1>
-          </div>
           <div class="mobile-nav-module center-horizontal pointer round-corner" @click="onGames">
             <h1>Spiele</h1>
           </div>
           <div class="mobile-nav-module center-horizontal pointer round-corner" @click="onProjects">
             <h1>Projekte</h1>
           </div>
-          <div class="mobile-nav-module center-horizontal pointer round-corner" @click="onSuggestion">
+          <!--<div class="mobile-nav-module center-horizontal pointer round-corner" @click="onSuggestion">
             <h1>Vorschläge</h1>
-          </div>
-          <div class="mobile-nav-module center-horizontal pointer round-corner" @click="onAbout">
-            <h1>Über Inforge</h1>
+          </div>/!-->
+          <div class="mobile-nav-module center-horizontal pointer round-corner" @click="onImpressum">
+            <h1>Impressum</h1>
           </div>
         </div>
       </div>
@@ -58,7 +55,7 @@ export default {
         this.$router.push("/suggestion")
       },
       onAbout(){
-        this.$router.push("/about")
+        this.$router.push("/impressum")
       },
 
       outsideClicked(){

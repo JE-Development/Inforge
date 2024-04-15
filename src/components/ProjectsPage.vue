@@ -18,7 +18,7 @@
                   <div style="height: 20px"></div>
                   <p class="center-text">Auf meinem Discord Server befindet sich ein selbstprogrammierter Discord Bot den wir 'Ivan Rusakov' getauft haben.</p>
                   <div class="center-horizontal">
-                    <img src="../assets/ivan_rusakov.png">
+                    <img src="../assets/ivan_rusakov.png" style="max-width: 100%">
                   </div>
                   <p class="center-text">Durch ihn konnte man einen Spieler zum 'Schere Stein Papier' spielen herausfordern (momentan offline).</p>
                   <p class="center-text">Man kann mit ihm auch irgendwelche Unsplash Bilder anhand eines Suchwortes anzeigen lassen und Kopf oder Zahl spielen.</p>
@@ -65,7 +65,7 @@
                   <p class="center-text">Intercra ist eine Suchmaschine, wo man selbst entscheiden kann, welche Webseite Suchergebnisse anzeigen kann und welche nicht. Dieses Projekt diente als besondere Lernleistung für meine Abiturprüfung im Fach Informatik.</p>
                   <p class="center-text">Für einen besseren Eindruck besucht gerne mal Intercra.</p>
                   <div class="center-horizontal">
-                    <img src="../assets/intercra.png">
+                    <img src="../assets/intercra.png" style="max-width: 100%">
                   </div>
                   <div style="height: 30px"></div>
                   <div class="center-horizontal">

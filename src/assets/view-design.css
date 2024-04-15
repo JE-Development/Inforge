@@ -272,8 +272,25 @@
     border-style: solid;
 }
 
+.project-box-up{
+    width: 95vw;
+    height: auto;
+    border-image: linear-gradient(#DC4201, #FD922D) 30;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.project-box-down{
+    width: 95vw;
+    height: auto;
+    border-image: linear-gradient(#DC4201, #FD922D) 30;
+    border-width: 2px;
+    border-style: solid;
+}
+
 .project-page-box{
-    width: 70vw;
+    width: 1400px;
+    max-width: 90vw;
     border-image: linear-gradient(#497c85, #6c95f8) 30;
     border-width: 4px;
     border-style: solid;
@@ -368,6 +385,15 @@
     height: 360px;
 }
 
+.ideascard{
+    background: rgba(38, 54, 87, 0.5);
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .main-field-text-block{
     width: 50%;
 }
@@ -400,7 +426,7 @@
 
 .mobile-nav{
     width: 600px;
-    height: 350px;
+    height: auto;
     background: #333333;
 }
 
@@ -577,6 +603,8 @@
 }
 
 
+
+
 @media (max-width: 1990px) {
     .project-headline-image{
         width: auto;
@@ -616,6 +644,28 @@
     }
 }
 
+@media (max-width: 1400px) {
+
+    .project-box-mobile{
+        display: inline-block;
+    }
+    .project-box{
+        display: none;
+    }
+
+    .project-box-right{
+        width: 95vw;
+        height: 800px;
+    }
+    .project-space-under{
+        height: 400px;
+    }
+
+    .infocard{
+        width: 40vw;
+    }
+}
+
 
 @media (max-width: 1350px) {
     .chain-image{
@@ -650,25 +700,6 @@
     .main-field-logo{
         display: flex;
         justify-content: center;
-    }
-}
-
-@media (max-width: 1100px) {
-
-    .project-box-mobile{
-        width: 60vw;
-        display: flex;
-    }
-    .project-box{
-        display: none;
-    }
-
-    .project-box-right{
-        width: 95vw;
-        height: 800px;
-    }
-    .project-space-under{
-        height: 400px;
     }
 }
 
