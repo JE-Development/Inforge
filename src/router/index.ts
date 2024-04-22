@@ -4,6 +4,7 @@ import GamesPage from "@/components/GamesPage.vue";
 import ProjectsPage from "@/components/ProjectsPage.vue";
 import SuggestionPage from "@/components/SuggestionPage.vue";
 import SuggestionUserPage from "@/components/SuggestionUserPage.vue";
+import ImpressumPage from "@/components/ImpressumPage.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,11 @@ const router = createRouter({
       path: '/suggestion/posts',
       name: 'SuggestionUserPage',
       component: SuggestionUserPage
+    },
+    {
+      path: '/impressum',
+      name: 'ImpressumPage',
+      component: ImpressumPage
     },
   ],
   scrollBehavior (to, from, savedPosition) {
