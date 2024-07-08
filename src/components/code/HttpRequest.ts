@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 
-export class HttpRequest{
+export default class HttpRequest{
     async httpRequest(url: string): Promise<any>{
 
         let ok = true;
@@ -44,24 +44,27 @@ export class HttpRequest{
 
     }
 
-    async httpRequestPost(url: string, body: any): Promise<any>{
-
+    async httpRequestPost(url: string, body: any) {
         let ok = true;
-
         let json;
 
-        await axios.post(url, body)
-            .then((response: any) => {
+        await axios.post(url, body, {
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+        })
+            .then(response => {
                 json = response.data;
             })
-            .catch((error: any) => {
-                console.log(error)
+            .catch(error => {
+                console.log(error);
+                ok = false;
             });
-        if(ok) {
+
+        if (ok) {
             return json;
-        }else{
+        } else {
             return "error";
         }
-
     }
 }

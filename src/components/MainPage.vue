@@ -16,7 +16,7 @@
       <div class="relative">
 
         <div>
-          <Header/>
+          <Header @lang="langClicked"/>
 
           <div class="center-horizontal">
             <div class="main-field round-corner center">
@@ -24,12 +24,12 @@
                 <div class="main-field-logo center-horizontal">
                   <img src="../assets/inforge-icon-text.png" class="inforge-text">
                 </div>
-                <h2 class="main-field-content center-text">Browser Games und Coding Projekte</h2>
-                <p class="main-field-content center-text">Inforge ist eine Platform und Sammelstelle für Projekte von Jason Enns.<br>
-                  Inforge bietet dabei Projekte in Form von Browser Games und Open Source Coding Projekte.</p>
-                <p class="main-field-content center-text">Inforge bietet auch eine Platform für den Austausch von Ideen, Vorschlägen und Bug Reports von Projekten.<br>
-                  Es ist für uns wichtig, Software und Webanwendung nach Communitywünschen zu entwickeln.</p>
-                <p class="main-field-content center-text">Probiert gerne die Spiele aus und gibt uns Ideen und Verbesserungsvorschläge zu den Projekten.</p>
+                <h2 class="main-field-content center-text">{{}}</h2>
+                <p class="main-field-content center-text">{{lang.main.subText}}<br>
+                  {{lang.main.line1}}</p>
+                <p class="main-field-content center-text">{{lang.main.line2}}<br>
+                  {{lang.main.line3}}</p>
+                <p class="main-field-content center-text">{{lang.main.line4}}</p>
               </div>
             </div>
           </div>
@@ -48,19 +48,16 @@
                   <img src="../assets/raute-dice.png" class="raute">
                 </div>
                 <div class="center-horizontal">
-                  <h3>DiceBluff</h3>
+                  <h3>{{lang.main.diceBluffHeadline}}</h3>
                 </div>
-                <p class="center-text">DiceBluff ist eine Browser Game Adaption von dem Würfelspiel namens "Mäxchen" oder "Mia".</p>
-                <p class="center-text">DiceBluff ist ein geselliges Würfelspiel, bei dem Spieler abwechselnd würfeln und versuchen,
-                  beim Lügen nicht erwischt zu werden. Spieler geben ihre Würfelergebnisse an und der nächste Spieler muss entscheiden,
-                  ob er ihnen glaubt oder nicht. Ziel ist es, als Letzter übrig zu bleiben. Es ist ein einfaches, aber unterhaltsames
-                  Spiel, das für jede Art von Zusammenkunft geeignet ist und für viel Spaß und Lachen sorgt.</p>
+                <p class="center-text">{{lang.main.diceBluffLine1}}</p>
+                <p class="center-text">{{lang.main.diceBluffLine2}}</p>
               </div>
               <div class="center-horizontal">
-                <UIButton :title="'Zu DiceBluff'" @click="onClickDiceBluff"/>
+                <UIButton :title="lang.main.diceBluffButton" @click="onClickDiceBluff"/>
               </div>
               <div class="center-horizontal">
-                <UIButton :title="'Weitere Informationen'" @click="onProjectDiceBluff" customClasses="wide-ui-button"/>
+                <UIButton :title="lang.ui.moreInformationButton" @click="onProjectDiceBluff" customClasses="wide-ui-button"/>
               </div>
             </div>
             <div style="width: 10%"></div>
@@ -70,16 +67,15 @@
                   <img src="../assets/raute-frame.png" class="raute">
                 </div>
                 <div class="center-horizontal">
-                  <h3>FrameGame</h3>
+                  <h3>{{lang.main.frameGameHeadline}}</h3>
                 </div>
-                <p class="center-text">FrameGame ist eine modifizierte Variante von "Gartic Phone". Anstatt Dinge zu zeichnen
-                  oder malen, kann man bei FrameGame sein Bild mit vielen verschiedenen Bilddateien zusammenstellen. Dabei stehen einem eine große Bibliothek an Bilder zur verfügung.</p>
+                <p class="center-text">{{lang.main.frameGameLine1}}</p>
               </div>
               <div class="center-horizontal">
-                <UIButton :title="'Zu FrameGame'" @click="onClickFrameGame"/>
+                <UIButton :title="lang.main.frameGameButton" @click="onClickFrameGame"/>
               </div>
               <div class="center-horizontal">
-                <UIButton :title="'Weitere Informationen'" @click="onProjectFrameGame" customClasses="wide-ui-button"/>
+                <UIButton :title="lang.ui.moreInformationButton" @click="onProjectFrameGame" customClasses="wide-ui-button"/>
               </div>
             </div>
             <div style="width: 5%"></div>
@@ -96,8 +92,8 @@
             </div>
             <div class="absolute center" style="width: 35vw; height: 700px">
               <div style="width: 30vw">
-                <h1 class="center-text">Weitere Projekte</h1>
-                <p class="center-text">Hier sind weitere Projekte die in Arbeit sind. Die meisten sind erst am Anfang in der Entwicklung und noch sehr unausgereift.</p>
+                <h1 class="center-text">{{lang.main.projectsHeadline}}</h1>
+                <p class="center-text">{{lang.main.projectsSub}}</p>
               </div>
             </div>
           </div>
@@ -108,16 +104,16 @@
             <div class="absolute max-width">
               <div class="project-grid max-height">
                 <div class="max-width max-height center" style="transform: translate(100px, -100px)">
-                  <InfoCard title="AmongUsLive" :button="'Weitere Infos'" teaser="AmongUsLive ist eine AmongUs Version die man im echten Leben spielen kann. Dieses Browsergame versucht das Spielerlebnis und die Spannung um echten Leben zu simulieren. Dabei ist dein Smartphone dein Wegbegleiter. Dieses Projekt liegt vorerst auf Eis, weil es in der Entwicklung zu komplikationen kam und andere Projekte vorrang hatten." @clicked="onProjectAmongUsLive"/>
+                  <InfoCard :title="lang.main.projectsAUL" :button="lang.ui.moreInfosButton" :teaser="lang.main.projectsAULText" @clicked="onProjectAmongUsLive"/>
                 </div>
                 <div class="max-width max-height center" style="transform: translate(0px, 60px)">
-                  <InfoCard title="DiscordBot" :button="'Weitere Infos'" teaser="DiscordBot ist ein selbstprogrammierter Discord Bot. Dieses Projekt steht noch in den Startlöchern und wartet darauf mit Features der Community gefüllt zu werden." @clicked="onProjectDiscordBot"/>
+                  <InfoCard :title="lang.main.projectsDC" :button="lang.ui.moreInfosButton" :teaser="lang.main.projectsDCText" @clicked="onProjectDiscordBot"/>
                 </div>
                 <div class="max-width max-height center" style="transform: translate(50px, -100px)">
-                  <InfoCard title="RaspiWindow" :button="'Weitere Infos'" teaser="RaspiWindow ist ein Smart Window. Es zeigt dir verschidene Informationen zu verschiedene Dinge an. Das Projekt ist eine Weseite, die damals von meinem Raspberry Pi 3b+ angezeigt wurde. Das Projekt ist bis jetzt nur für meine private Anwendung konzipiert. Es folgt noch eine communitytaugliche Version." @clicked="onProjectRaspiWindow"/>
+                  <InfoCard :title="lang.main.projectsRW" :button="lang.ui.moreInfosButton" :teaser="lang.main.projectsRWText" @clicked="onProjectRaspiWindow"/>
                 </div>
                 <div class="max-width max-height center" style="transform: translate(-100px, 80px)">
-                  <InfoCard title="Intercra" :button="'Weitere Infos'" teaser="Intercra ist eine benutzerdefinierte Suchmaschine, die Suchergebnisse anhand von Voreingestellten Webseiten anzeigen kann. Dieses Projekt ist im Ramen meiner Abiturprüfung entstanden." @clicked="onProjectIntercra"/>
+                  <InfoCard :title="lang.main.projectsIC" :button="lang.ui.moreInfosButton" :teaser="lang.main.projectsICText" @clicked="onProjectIntercra"/>
                 </div>
               </div>
             </div>
@@ -130,24 +126,24 @@
           <div class="project-box-mobile">
             <div class="project-box-up">
               <div>
-                <h1 class="center-text">Weitere Projekte</h1>
-                <p class="center-text">Hier sind weitere Projekte die in Arbeit sind. Die meisten sind erst am Anfang in der Entwicklung und noch sehr unausgereift.</p>
+                <h1 class="center-text">{{lang.main.projectsHeadline}}</h1>
+                <p class="center-text">{{lang.main.projectsSub}}</p>
               </div>
             </div>
             <div class="project-box-mobile center-horizontal" style="width: 95vw">
               <div class="project-box-down">
                 <div class="project-grid max-height max-width">
                   <div class="max-width max-height center">
-                    <InfoCard title="AmongUsLive" :button="'Weitere Infos'" teaser="AmongUsLive ist eine AmongUs Version die man im echten Leben spielen kann. Dieses Browsergame versucht das Spielerlebnis und die Spannung um echten Leben zu simulieren. Dabei ist dein Smartphone dein Wegbegleiter. Dieses Projekt liegt vorerst auf Eis, weil es in der Entwicklung zu komplikationen kam und andere Projekte vorrang hatten." @clicked="onProjectAmongUsLive"/>
+                    <InfoCard :title="lang.main.projectsAUL" :button="lang.ui.moreInfosButton" :teaser="lang.main.projectsAULText" @clicked="onProjectAmongUsLive"/>
                   </div>
                   <div class="max-width max-height center">
-                    <InfoCard title="DiscordBot" :button="'Weitere Infos'" teaser="DiscordBot ist ein selbstprogrammierter Discord Bot. Dieses Projekt steht noch in den Startlöchern und wartet darauf mit Features der Community gefüllt zu werden." @clicked="onProjectDiscordBot"/>
+                    <InfoCard :title="lang.main.projectsDC" :button="lang.ui.moreInfosButton" :teaser="lang.main.projectsDCText" @clicked="onProjectDiscordBot"/>
                   </div>
                   <div class="max-width max-height center">
-                    <InfoCard title="RaspiWindow" :button="'Weitere Infos'" teaser="RaspiWindow ist ein Smart Window. Es zeigt dir verschidene Informationen zu verschiedene Dinge an. Das Projekt ist eine Weseite, die damals von meinem Raspberry Pi 3b+ angezeigt wurde. Das Projekt ist bis jetzt nur für meine private Anwendung konzipiert. Es folgt noch eine communitytaugliche Version." @clicked="onProjectRaspiWindow"/>
+                    <InfoCard :title="lang.main.projectsRW" :button="lang.ui.moreInfosButton" :teaser="lang.main.projectsRWText" @clicked="onProjectRaspiWindow"/>
                   </div>
                   <div class="max-width max-height center">
-                    <InfoCard title="Intercra" :button="'Weitere Infos'" teaser="Intercra ist eine benutzerdefinierte Suchmaschine, die Suchergebnisse anhand von Voreingestellten Webseiten anzeigen kann. Dieses Projekt ist im Ramen meiner Abiturprüfung entstanden." @clicked="onProjectIntercra"/>
+                    <InfoCard :title="lang.main.projectsIC" :button="lang.ui.moreInfosButton" :teaser="lang.main.projectsICText" @clicked="onProjectIntercra"/>
                   </div>
                 </div>
               </div>
@@ -176,26 +172,18 @@
                 <!--
                 <h1 class="center-text">Das Vorschlägesystem von Inforge</h1>
                 <p class="center-text">Hier findest du eine kurze Einführung zum Vorschlägesystem</p>/!-->
-                <h1 class="center-text">Ideen für weitere Projekte</h1>
-                <p class="center-text">Hier sieht man Ideen zu Projekten die ich umsetzen möchte</p>
+                <h1 class="center-text">{{lang.main.ideasHeadline}}</h1>
+                <p class="center-text">{{lang.main.ideasSub}}</p>
               </div>
             </div>
           </div>
           <div class="project-box-half center" style="background: #000000">
             <div style="width: 80%; height: 95%" class="center">
               <div>
-                <!--<p class="center-text">Inforge bietet ein Vorschlägesystem, welches ermöglicht, Projekte mit Communitywünschen zu entwickeln oder zu verbessern.</p>
-                <p class="center-text">Du kannst ganz einfach ein Vorschlag schreiben bei dem jeweiligen Projekt, bei welchem
-                  du deine Ideen einbringen möchtest. Dabei kann man auch die Vorschläge der anderen sehen. Man kann auch die
-                  Vorschläge der anderen upvoten oder downvoten. Man sollte verhindern Vorschläge doppelt aufzuschreiben.
-                  Wenn du ein Vorschlag hast, welches bereits von jemand anderem vorgeschlagen worden ist, gebe ein upvote,
-                  damit wir sehen, dass dieser Vprschlag beliebt ist</p>
-                <p class="center-text">Deine Vorschläge werden in einer Google Cloud Datenbank gelagert und mit deinem Google Konto verknüpft.</p>
-                /!-->
-                <IdeasCard title="Mensch ärgere dich nicht mit Powerups" teaser="Mensch ärgere dich nicht spannender gestalten durch Verwendung von Powerups die das Spielerlebnis erweitern und spannender machen."/>
-                <IdeasCard title="BattleFlag" teaser="Eine Adaption vom alten ICQ spiel namens 'RPS'. Ein gGemisch aus Schere Stein Papier und Schach."/>
-                <IdeasCard title="OpenBG" teaser="Eine Sammelstelle von Browsergames-Lobbys. Eine Platform wo die private Lobby eines Browsergames gelistet ist damit auch fremde Spieler die Lobby beitreten können."/>
-                <IdeasCard title="LEDSteuerung" teaser="Eine LED-Steuerungssoftware mit der man LEDs steuern kann. Spezialisiert auf ansteuerbare LEDs wie zb WS2812 LEDs."/>
+                <IdeasCard :title="lang.main.ideasProject1Headline" :teaser="lang.main.ideasProject1Text"/>
+                <IdeasCard :title="lang.main.ideasProject2Headline" :teaser="lang.main.ideasProject2Text"/>
+                <IdeasCard :title="lang.main.ideasProject3Headline" :teaser="lang.main.ideasProject3Text"/>
+                <IdeasCard :title="lang.main.ideasProject4Headline" :teaser="lang.main.ideasProject4Text"/>
               </div>
             </div>
           </div>
@@ -207,25 +195,18 @@
               <div class="center">
                 <div>
                   <!--<h1 class="center-text">Das Vorschlägesystem von Inforge</h1>/!-->
-                  <h1 class="center-text">Ideen für weitere Projekte</h1>
-                  <p class="center-text">Hier sieht man Ideen zu Projekten die ich umsetzen möchte</p>
+                  <h1 class="center-text">{{lang.main.ideasHeadline}}</h1>
+                  <p class="center-text">H{{lang.main.ideasSub}}</p>
                 </div>
               </div>
             </div>
             <div class="project-box-half-mobile center">
               <div style="width: 80%; height: 95%" class="center">
                 <div>
-                  <!--<p class="center-text">Inforge bietet ein Vorschlägesystem, welches ermöglicht, Projekte mit Communitywünschen zu entwickeln oder zu verbessern.</p>
-                  <p class="center-text">Du kannst ganz einfach ein Vorschlag schreiben bei dem jeweiligen Projekt, bei welchem
-                    du deine Ideen einbringen möchtest. Dabei kann man auch die Vorschläge der anderen sehen. Man kann auch die
-                    Vorschläge der anderen upvoten oder downvoten. Man sollte verhindern Vorschläge doppelt aufzuschreiben.
-                    Wenn du ein Vorschlag hast, welches bereits von jemand anderem vorgeschlagen worden ist, gebe ein upvote,
-                    damit wir sehen, dass dieser Vprschlag beliebt ist</p>
-                  <p class="center-text">Deine Vorschläge werden in einer Google Cloud Datenbank gelagert und mit deinem Google Konto verknüpft.</p>/!-->
-                  <IdeasCard title="Mensch ärgere dich nicht mit Powerups" teaser="Mensch ärgere dich nicht spannender gestalten durch Verwendung von Powerups die das Spielerlebnis erweitern und spannender machen."/>
-                  <IdeasCard title="BattleFlag" teaser="Eine Adaption vom alten ICQ spiel namens 'RPS'. Ein gGemisch aus Schere Stein Papier und Schach."/>
-                  <IdeasCard title="OpenBG" teaser="Eine Sammelstelle von Browsergames-Lobbys. Eine Platform wo die private Lobby eines Browsergames gelistet ist damit auch fremde Spieler die Lobby beitreten können."/>
-                  <IdeasCard title="LEDSteuerung" teaser="Eine LED-Steuerungssoftware mit der man LEDs steuern kann. Spezialisiert auf ansteuerbare LEDs wie zb WS2812 LEDs."/>
+                  <IdeasCard :title="lang.main.ideasProject1Headline" :teaser="lang.main.ideasProject1Text"/>
+                  <IdeasCard :title="lang.main.ideasProject2Headline" :teaser="lang.main.ideasProject2Text"/>
+                  <IdeasCard :title="lang.main.ideasProject3Headline" :teaser="lang.main.ideasProject3Text"/>
+                  <IdeasCard :title="lang.main.ideasProject4Headline" :teaser="lang.main.ideasProject4Text"/>
                 </div>
               </div>
             </div>
@@ -239,11 +220,11 @@
       <div class="center-horizontal">
         <img src="../assets/raute-dice.png" class="stats-raute">
         <div style="width: 10px"></div>
-        <h1 class="prim-color stats-headline">DiceBluff</h1>
+        <h1 class="prim-color stats-headline">{{lang.main.statsDBHeadline}}</h1>
       </div>
       <div class="center-horizontal">
-        <div class="white" v-if="diceBluffStatus">Serverstatus: <span class="green">online</span></div>
-        <div class="white" v-else>Serverstatus: <span class="red">offline</span></div>
+        <div class="white" v-if="diceBluffStatus">{{lang.main.statsStatus}}: <span class="green">online</span></div>
+        <div class="white" v-else>{{lang.main.statsStatus}}: <span class="red">offline</span></div>
       </div>
 
       <div class="center-horizontal">
@@ -255,11 +236,11 @@
 
         <div class="stats round-corner center">
           <div class="stats-grid-dicebluff" v-if="diceBluffRender">
-            <StatsModule title="Sitzungen online" :data="diceBluffStats.sessionOnline"/>
-            <StatsModule title="Spieler online" :data="diceBluffStats.playerOnline"/>
-            <StatsModule title="Sitzungen insgesamt" :data="diceBluffStats.sessionTotal"/>
-            <StatsModule title="Sieger insgesamt" :data="diceBluffStats.winner"/>
-            <StatsModule title="Verlierer insgesamt" :data="diceBluffStats.looser"/>
+            <StatsModule :title="lang.main.statsDBSessionOnline" :data="diceBluffStats.sessionOnline"/>
+            <StatsModule :title="lang.main.statsDBPlayersOnline" :data="diceBluffStats.playerOnline"/>
+            <StatsModule :title="lang.main.statsDBSessionTotal" :data="diceBluffStats.sessionTotal"/>
+            <StatsModule :title="lang.main.statsDBWinner" :data="diceBluffStats.winner"/>
+            <StatsModule :title="lang.main.statsDBLooser" :data="diceBluffStats.looser"/>
           </div>
         </div>
 
@@ -270,21 +251,21 @@
       <div class="center-horizontal">
         <img src="../assets/raute-frame.png" class="stats-raute">
         <div style="width: 10px"></div>
-        <h1 class="prim-color stats-headline">FrameGame</h1>
+        <h1 class="prim-color stats-headline">{{lang.main.statsFGHeadline}}</h1>
       </div>
       <div class="center-horizontal">
-        <div class="white" v-if="FrameGameStatus">Serverstatus: <span class="green">online</span></div>
-        <div class="white" v-else>Serverstatus: <span class="red">offline</span></div>
+        <div class="white" v-if="FrameGameStatus">{{lang.main.statsStatus}}: <span class="green">online</span></div>
+        <div class="white" v-else>{{lang.main.statsStatus}}: <span class="red">offline</span></div>
       </div>
 
       <div class="center-horizontal">
 
         <div class="stats round-corner center">
           <div class="stats-grid-framegame" v-if="frameGameRender">
-            <StatsModule title="Sitzungen online" :data="frameGameStats.sessionOnline"/>
-            <StatsModule title="Spieler online" :data="frameGameStats.playerOnline"/>
-            <StatsModule title="Sitzungen insgesamt" :data="frameGameStats.sessionTotal"/>
-            <StatsModule title="Bilder kreiert" :data="frameGameStats.created"/>
+            <StatsModule :title="lang.main.statsFGSessionOnline" :data="frameGameStats.sessionOnline"/>
+            <StatsModule :title="lang.main.statsFGPlayersOnline" :data="frameGameStats.playerOnline"/>
+            <StatsModule :title="lang.main.statsFGSessionTotal" :data="frameGameStats.sessionTotal"/>
+            <StatsModule :title="lang.main.statsFGImage" :data="frameGameStats.created"/>
           </div>
         </div>
 
@@ -309,6 +290,7 @@ import Header from "@/components/views/Header.vue";
 import StatsModule from "@/components/views/StatsModule.vue";
 import {nextTick} from "vue";
 import IdeasCard from "@/components/views/IdeasCard.vue";
+import HttpRequest from "@/components/code/HttpRequest.ts";
 
 export default {
     name: "MainPage",
@@ -322,7 +304,8 @@ export default {
           diceBluffStats: {},
           frameGameStats: {},
           diceBluffRender: true,
-          frameGameRender: true
+          frameGameRender: true,
+          lang: langDE,
         };
     },
 
@@ -343,6 +326,12 @@ export default {
     },
 
   mounted() {
+
+    if(this.getCookies("lang") === null || this.getCookies("lang") === "en"){
+      this.lang = langEN
+    }else{
+      this.lang = langDE
+    }
 
     window.addEventListener('beforeunload', this.eventClose);
 
@@ -419,6 +408,14 @@ export default {
         window.open('https://dicebluff.inforge.de', '_self');
       },
 
+      langClicked(){
+        if(this.getCookies("lang") === null || this.getCookies("lang") === "en"){
+          this.lang = langEN
+        }else{
+          this.lang = langDE
+        }
+      },
+
       send(data){
         this.socket.send(JSON.stringify(data))
       },
@@ -447,9 +444,7 @@ export default {
             return this.$cookies.get(key);
         },
       setCookies(key, value){
-        if(this.getCookies("allowedCookies") === "true"){
-          this.$cookies.set(key, value, 2147483647);
-        }
+        this.$cookies.set(key, value, 2147483647);
       },
     }
 }

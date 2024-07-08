@@ -1,6 +1,6 @@
 <template>
 
-    <div class="absolute pointer">
+    <div class="pointer">
       <div class="lang-border">
         <img src="../../assets/lang_icon.svg" style="width: 30px">
         <h3 style="transform: translateY(-15px); margin-left: 5px">{{lang}}</h3>
