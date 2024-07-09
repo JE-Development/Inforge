@@ -1,9 +1,9 @@
 <template>
 
     <div class="center-horizontal">
-      <h2 class="prim-color nav-text" @click="onGames">Spiele</h2>
+      <h2 class="prim-color nav-text" @click="onGames">{{lang.nav.games}}</h2>
       <div style="width: 30px"></div>
-      <h2 class="prim-color nav-text" @click="onProjects">Projekte</h2>
+      <h2 class="prim-color nav-text" @click="onProjects">{{lang.nav.projects}}</h2>
       <!--<div style="width: 30px"></div>
       <h2 class="prim-color nav-text" @click="onSuggestion">Vorschläge</h2>/!-->
       <div style="width: 30px"></div>
@@ -35,7 +35,10 @@
 
 <script>
 
+import EventBus from "./../code/EventBusEvent";
 import UIButton from "@/components/views/UIButton.vue";
+import langDE from "../../assets/langDE.json"
+import langEN from "../../assets/langEN.json"
 
 export default {
     name: "NavHeader",
@@ -44,15 +47,31 @@ export default {
         return {
           showLogout: false,
           image: "",
-          showLogin: true
+          showLogin: true,
+          lang: langDE,
         };
     },
 
     created() {
       document.addEventListener('click', this.handleClickOutside);
+
+      EventBus.addEventListener('lang', (event) => {
+        let mode = event.data
+        if(mode === "en"){
+          this.lang = langEN
+        }else{
+          this.lang = langDE
+        }
+      })
     },
 
     mounted() {
+      if(this.getCookies("lang") === null || this.getCookies("lang") === "en"){
+        this.lang = langEN
+      }else{
+        this.lang = langDE
+      }
+
       let avatar = this.getCookies("avatar")
       if(avatar !== null){
         this.image = "https://cdn.discordapp.com/avatars/" + this.getCookies("id") + "/" + avatar + ".png"

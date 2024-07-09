@@ -73,7 +73,21 @@
 
   },
   "projects": {
-    "dicordBotLine1": "Stop Game"
+    "dcHeadline": "DiscordBot",
+    "dcLine1": "Auf meinem Discord Server befindet sich ein selbstprogrammierter Discord Bot den wir 'Ivan Rusakov' getauft haben.",
+    "dcLine2": "Durch ihn konnte man einen Spieler zum 'Schere Stein Papier' spielen herausfordern (momentan offline).",
+    "dcLine3": "Man kann mit ihm auch irgendwelche Unsplash Bilder anhand eines Suchwortes anzeigen lassen und Kopf oder Zahl spielen.",
+    "dcLine4": "Dieses Projekt läuft momentan auf einen Strato Server. Es ist in der Planung das Projekt auf einen VPS umzulegen. Unter anderem Deswegen ist das Projekt noch nicht für die Allgemeinheit verfügbar.",
+    "rwHeadline": "RaspiWindow",
+    "rwLine1": "RaspiWindow ist eine Vollbildwebseite, die dir Verschiedene Informationen dauerhaft anzeigen lassen kann. Bis zu diesen Stand kann sie Aktien, das Wetter und die neusten Discord Nachrichten anzeigen. RaspiWindow hat auch alle 10 Minuten den Hintergrund geändert. Ich habe als Hintergrundthema 'Space' eingestellt.",
+    "icHeadline": "Intercra",
+    "icLine1": "Intercra ist eine Suchmaschine, wo man selbst entscheiden kann, welche Webseite Suchergebnisse anzeigen kann und welche nicht. Dieses Projekt diente als besondere Lernleistung für meine Abiturprüfung im Fach Informatik.",
+    "icLine2": "Für einen besseren Eindruck besucht gerne mal Intercra.",
+    "icButton": "Zu Intercra"
+  },
+  "nav": {
+    "games": "Spiele",
+    "projects": "Projekte"
   },
   "ui": {
     "moreInformationButton": "Weitere Informationen",

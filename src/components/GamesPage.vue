@@ -91,6 +91,7 @@
 
 <script>
 
+import EventBus from "./code/EventBusEvent";
 import NavHeader from "@/components/views/NavHeader.vue";
 import NavMobile from "@/components/views/NavMobile.vue";
 import Header from "@/components/views/Header.vue";
@@ -141,8 +142,10 @@ export default {
       langClicked(){
         if(this.getCookies("lang") === null || this.getCookies("lang") === "en"){
           this.lang = langEN
+          EventBus.emit("lang", "en")
         }else{
           this.lang = langDE
+          EventBus.emit("lang", "de")
         }
       },
 

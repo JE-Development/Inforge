@@ -54,7 +54,7 @@
                 <p class="center-text">{{lang.main.diceBluffLine2}}</p>
               </div>
               <div class="center-horizontal">
-                <UIButton :title="lang.main.diceBluffButton" @click="onClickDiceBluff"/>
+                <UIButton :title="lang.main.diceBluffButton" @click="onClickDiceBluff" customClasses="wide-ui-button"/>
               </div>
               <div class="center-horizontal">
                 <UIButton :title="lang.ui.moreInformationButton" @click="onProjectDiceBluff" customClasses="wide-ui-button"/>
@@ -72,7 +72,7 @@
                 <p class="center-text">{{lang.main.frameGameLine1}}</p>
               </div>
               <div class="center-horizontal">
-                <UIButton :title="lang.main.frameGameButton" @click="onClickFrameGame"/>
+                <UIButton :title="lang.main.frameGameButton" @click="onClickFrameGame" customClasses="wide-ui-button"/>
               </div>
               <div class="center-horizontal">
                 <UIButton :title="lang.ui.moreInformationButton" @click="onProjectFrameGame" customClasses="wide-ui-button"/>
@@ -281,6 +281,7 @@
 
 <script>
 
+import EventBus from "./code/EventBusEvent";
 import langDE from "../assets/langDE.json"
 import langEN from "../assets/langEN.json"
 import NavHeader from "@/components/views/NavHeader.vue";
@@ -411,8 +412,10 @@ export default {
       langClicked(){
         if(this.getCookies("lang") === null || this.getCookies("lang") === "en"){
           this.lang = langEN
+          EventBus.emit("lang", "en")
         }else{
           this.lang = langDE
+          EventBus.emit("lang", "de")
         }
       },
 
